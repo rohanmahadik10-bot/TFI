@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Trips From India – Travel Beyond Borders</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#1a1a2e;--navy2:#16213e;--teal:#ff6b35;--teal2:#ff8c5a;--amber:#ffd23f;--amber2:#ffe066;--cream:#fff9f0;--white:#fff;--muted:#8a8fa8;--card-bg:#fff5eb;--sky:#0096ff;--sky2:#33adff;--mint:#06d6a0;--pink:#ff4d8d;}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 56px;height:72px;display:flex;align-items:center;justify-content:space-between;background:rgba(26,26,46,0.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.07)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer}
+.nav-logo img{height:100px;width:100px;object-fit:contain;border-radius:8px}
+.nav-logo-name{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--white)}
+.nav-logo-name span{color:var(--teal)}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{text-decoration:none;font-size:13px;font-weight:500;color:rgba(255,255,255,0.55);cursor:pointer;transition:color 0.2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--teal)!important;color:var(--white)!important;padding:10px 24px!important;border-radius:50px!important;font-weight:700!important;font-size:13px!important}
+.nav-cta:hover{background:var(--teal2)!important}
+.nav-ai{background:linear-gradient(135deg,#7c3aed,#a855f7)!important;color:var(--white)!important;padding:10px 20px!important;border-radius:50px!important;font-weight:700!important;font-size:13px!important;display:inline-flex!important;align-items:center!important;gap:6px!important}
+.nav-ai:hover{opacity:0.9!important;transform:translateY(-1px)!important}
+.hero{min-height:100vh;background:linear-gradient(rgba(26,26,46,0.45),rgba(26,26,46,0.78)),url('hallstatt.png');background-size:cover;background-position:50% 85%;background-repeat:no-repeat;display:flex;align-items:center;position:relative;overflow:hidden;padding:100px 56px 80px}
+.hero-glow{position:absolute;width:600px;height:600px;top:-100px;right:-100px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,53,0.15),transparent 65%);pointer-events:none}
+.hero-left{position:relative;z-index:2;max-width:600px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,107,53,0.15);border:1px solid rgba(255,107,53,0.4);color:#ffaa85;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:50px;margin-bottom:28px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(50px,6.5vw,82px);font-weight:700;line-height:1.05;color:var(--white);margin-bottom:16px}
+.hero h1 em{color:var(--teal2);font-style:italic}
+.hero-sub{font-size:16px;line-height:1.8;font-weight:300;color:rgba(255,255,255,0.65);margin-bottom:40px;max-width:500px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-teal{background:var(--teal);color:var(--white);padding:15px 34px;border-radius:50px;font-weight:700;font-size:14px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.25s;box-shadow:0 8px 28px rgba(255,107,53,0.35);border:none;cursor:pointer}
+.btn-teal:hover{background:var(--teal2);transform:translateY(-2px)}
+.btn-outline{border:1.5px solid rgba(255,255,255,0.25);color:var(--white);padding:14px 30px;border-radius:50px;font-weight:500;font-size:14px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.25s;background:transparent;cursor:pointer}
+.btn-outline:hover{border-color:rgba(255,255,255,0.6);background:rgba(255,255,255,0.06)}
+.btn-ai-hero{background:linear-gradient(135deg,#7c3aed,#a855f7);color:var(--white);padding:14px 30px;border-radius:50px;font-weight:700;font-size:14px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.25s;box-shadow:0 8px 28px rgba(124,58,237,0.35);border:none;cursor:pointer}
+.btn-ai-hero:hover{opacity:0.9;transform:translateY(-2px)}
+.hero-stats{display:flex;gap:0;margin-top:60px;border-top:1px solid rgba(255,255,255,0.1);padding-top:40px;flex-wrap:wrap}
+.hero-stat{padding:0 36px 0 0;border-right:1px solid rgba(255,255,255,0.1)}
+.hero-stat:first-child{padding-left:0}
+.hero-stat:last-child{border-right:none}
+.stat-n{font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:var(--white)}
+.stat-n span{color:var(--teal2)}
+.stat-l{font-size:12px;color:var(--muted);margin-top:4px}
+section{padding:96px 56px}
+.section-tag{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#ff6b35;margin-bottom:14px;display:block}
+.section-h{font-family:'Playfair Display',serif;font-size:clamp(34px,4vw,52px);font-weight:700;line-height:1.1;color:var(--navy);margin-bottom:18px}
+.section-h em{color:#ff6b35;font-style:italic}
+.section-h.light{color:var(--white)}
+.section-p{font-size:15px;line-height:1.85;color:#4a5a6a;max-width:540px}
+.section-p.light{color:rgba(255,255,255,0.55)}
+.why{background:var(--white)}
+.why-wrap{max-width:1200px;margin:0 auto}
+.why-top{text-align:center;margin-bottom:60px}
+.why-top .section-p{margin:0 auto}
+.why-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.why-card{padding:40px 32px;border-radius:20px;background:var(--card-bg);border:1px solid rgba(10,22,40,0.06);position:relative;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}
+.why-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(255,107,53,0.15)}
+.why-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.why-card:nth-child(1){background:linear-gradient(145deg,#fff5eb,#ffe8d6)}
+.why-card:nth-child(1)::before{background:linear-gradient(to right,#ff6b35,#ff4d8d)}
+.why-card:nth-child(2){background:linear-gradient(145deg,#fffbea,#fff3c0)}
+.why-card:nth-child(2)::before{background:linear-gradient(to right,#ffd23f,#f59e0b)}
+.why-card:nth-child(3){background:linear-gradient(145deg,#eaf6ff,#cce8ff)}
+.why-card:nth-child(3)::before{background:linear-gradient(to right,#0096ff,#06d6a0)}
+.why-num{font-family:'Playfair Display',serif;font-size:56px;font-weight:700;color:rgba(10,22,40,0.07);margin-bottom:16px}
+.why-card h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:12px}
+.why-card p{font-size:14px;line-height:1.85;color:#4a5a6a}
+.serve{background:var(--cream)}
+.serve-wrap{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.serve-cards{display:flex;flex-direction:column;gap:20px;margin-top:36px}
+.serve-card{display:flex;gap:20px;align-items:flex-start;background:var(--white);border-radius:16px;padding:24px;border:1px solid rgba(10,22,40,0.07);transition:box-shadow 0.2s,transform 0.2s}
+.serve-card:hover{box-shadow:0 12px 32px rgba(10,22,40,0.08);transform:translateX(4px)}
+.serve-dot{width:48px;height:48px;border-radius:14px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:22px}
+.sd1{background:rgba(255,107,53,0.15)}.sd2{background:rgba(255,210,63,0.2)}.sd3{background:rgba(0,150,255,0.12)}
+.serve-card h4{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.serve-card p{font-size:13px;line-height:1.8;color:#5a6a7a}
+.serve-right{padding-top:20px}
+.serve-visual-cards{display:flex;flex-direction:column;gap:16px}
+.svc{border-radius:16px;padding:24px 28px;display:flex;align-items:center;gap:20px}
+.svc1{background:linear-gradient(135deg,#1a1a2e,#2d2d5e)}.svc2{background:linear-gradient(135deg,#ff6b35,#ff4d8d)}.svc3{background:linear-gradient(135deg,#ffd23f,#f59e0b)}.svc4{background:linear-gradient(135deg,#e8f7ff,#cce8ff);border:1px solid rgba(0,150,255,0.15)}
+.svc-icon{font-size:28px}
+.svc-text strong{color:var(--white);font-size:15px;font-weight:600;display:block}
+.svc4 .svc-text strong{color:#1a1a2e}.svc3 .svc-text strong{color:#1a1a2e}
+.svc-text span{color:rgba(255,255,255,0.7);font-size:12px}
+.svc4 .svc-text span{color:#0065b3}.svc3 .svc-text span{color:rgba(26,26,46,0.7)}
+.destinations{background:linear-gradient(160deg,#1a1a2e 0%,#0f3460 60%,#1a1a2e 100%);padding:96px 56px}
+.dest-wrap{max-width:1200px;margin:0 auto}
+.dest-top{text-align:center;margin-bottom:48px}
+.dest-tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.tab-btn{padding:10px 24px;border-radius:50px;border:1.5px solid rgba(255,255,255,0.15);background:transparent;color:rgba(255,255,255,0.5);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;cursor:pointer;transition:all 0.2s}
+.tab-btn.active,.tab-btn:hover{background:var(--teal);border-color:var(--teal);color:var(--white);font-weight:700}
+.dest-panel{display:none}.dest-panel.active{display:grid}
+.dest-grid{grid-template-columns:repeat(3,1fr);gap:16px}
+.dest-card{border-radius:18px;overflow:hidden;position:relative;cursor:pointer;min-height:210px;transition:transform 0.3s}
+.dest-card:hover{transform:scale(1.025)}
+.dest-card.wide{grid-column:1/3;min-height:260px}
+.dest-bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.dest-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,22,40,0.92) 0%,rgba(10,22,40,0.2) 55%,transparent 100%)}
+.dest-info{position:absolute;bottom:0;left:0;right:0;padding:20px 22px}
+.dest-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--white);margin-bottom:3px}
+.dest-card.wide .dest-name{font-size:26px}
+.dest-sub{font-size:12px;color:rgba(255,255,255,0.6);margin-bottom:8px}
+.dest-price{display:inline-block;background:var(--teal);color:var(--white);font-size:11px;font-weight:700;padding:4px 12px;border-radius:50px}
+
+/* ── BUDGET SECTION ── */
+.budget-section{background:linear-gradient(135deg,#0d1117 0%,#1a1a2e 40%,#0d2137 100%);padding:96px 56px;position:relative;overflow:hidden}
+.budget-section::before{content:'';position:absolute;top:-200px;right:-200px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(255,210,63,0.08),transparent 70%)}
+.budget-section::after{content:'';position:absolute;bottom:-150px;left:-150px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(6,214,160,0.06),transparent 70%)}
+.budget-wrap{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.budget-top{text-align:center;margin-bottom:56px}
+.budget-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,210,63,0.15);border:1px solid rgba(255,210,63,0.4);color:var(--amber);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:8px 20px;border-radius:50px;margin-bottom:20px}
+.budget-heading{font-family:'Playfair Display',serif;font-size:clamp(38px,5vw,64px);font-weight:700;color:var(--white);margin-bottom:10px;line-height:1.05}
+.budget-heading .strike-num{color:var(--amber);font-style:italic}
+.budget-sub{font-size:16px;color:rgba(255,255,255,0.55);max-width:520px;margin:0 auto;line-height:1.75}
+.budget-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.budget-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:24px 18px;cursor:pointer;transition:all 0.3s;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start}
+.budget-card:hover{transform:translateY(-8px);background:rgba(255,255,255,0.08);border-color:rgba(255,210,63,0.3);box-shadow:0 20px 50px rgba(0,0,0,0.4)}
+.budget-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--amber),var(--mint));opacity:0;transition:opacity 0.3s}
+.budget-card:hover::before{opacity:1}
+.budget-emoji{font-size:36px;margin-bottom:14px}
+.budget-dest{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--white);margin-bottom:4px;line-height:1.2}
+.budget-nights{font-size:11px;color:var(--muted);margin-bottom:12px}
+.budget-price-tag{background:linear-gradient(135deg,var(--amber),#f59e0b);color:#1a1a2e;font-size:13px;font-weight:800;padding:5px 14px;border-radius:50px;display:inline-block;margin-bottom:12px}
+.budget-tags{display:flex;flex-wrap:wrap;gap:5px}
+.budget-tag{background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.5);font-size:10px;padding:3px 8px;border-radius:20px}
+.budget-card-cta{margin-top:auto;padding-top:14px;font-size:12px;font-weight:600;color:var(--amber);display:flex;align-items:center;gap:5px}
+
+.promise{background:var(--white)}
+.promise-wrap{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.promise-list{display:flex;flex-direction:column;gap:28px;margin-top:32px}
+.p-item{display:flex;gap:20px}
+.p-num{flex-shrink:0;width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#ff6b35,#ff4d8d);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:white}
+.p-item h4{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.p-item p{font-size:13px;line-height:1.8;color:#5a6a7a}
+.promise-box{background:var(--navy);border-radius:24px;padding:44px;position:relative;overflow:hidden}
+.promise-box::before{content:'';position:absolute;top:-60px;right:-60px;width:250px;height:250px;background:radial-gradient(circle,rgba(255,107,53,0.2),transparent 70%)}
+.pb-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--white);margin-bottom:6px}
+.pb-sub{font-size:13px;color:var(--muted);margin-bottom:30px}
+.pb-items{display:flex;flex-direction:column;gap:12px}
+.pb-item{display:flex;gap:14px;align-items:center;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:14px 18px}
+.pb-icon{font-size:20px;flex-shrink:0}
+.pb-text strong{display:block;color:var(--white);font-size:14px;font-weight:600}
+.pb-text span{color:var(--muted);font-size:12px}
+.cta{background:linear-gradient(135deg,#ff6b35 0%,#ff4d8d 50%,#ffd23f 100%);padding:96px 56px;text-align:center}
+.cta .section-tag{color:rgba(255,255,255,0.7)}.cta .section-h{color:var(--white)}
+.cta-sub{font-size:16px;color:rgba(255,255,255,0.8);margin:0 auto 40px;max-width:520px;line-height:1.75}
+.cta-form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;max-width:720px;margin:0 auto 20px}
+.cta-input{flex:1;min-width:180px;padding:15px 22px;border-radius:50px;border:1.5px solid rgba(255,255,255,0.25);font-family:'DM Sans',sans-serif;font-size:14px;background:rgba(255,255,255,0.15);color:var(--white);outline:none}
+.cta-input::placeholder{color:rgba(255,255,255,0.6)}
+.cta-input:focus{border-color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.2)}
+.cta-submit{background:#1a1a2e;color:var(--white);padding:15px 36px;border-radius:50px;border:none;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all 0.2s;white-space:nowrap}
+.cta-submit:hover{background:#2d2d5e;transform:translateY(-2px)}
+#formMsg{margin-top:14px;font-weight:600;font-size:15px;color:var(--white);display:none}
+.cta-or{color:rgba(255,255,255,0.5);font-size:13px;margin:20px 0 16px}
+.cta-contact-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-wa,.btn-call,.btn-email{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:50px;text-decoration:none;font-weight:700;font-size:13px;transition:all 0.2s;cursor:pointer;border:none}
+.btn-wa{background:#25d366;color:white;box-shadow:0 6px 20px rgba(37,211,102,0.3)}.btn-wa:hover{background:#1da851;transform:translateY(-2px)}
+.btn-call{background:rgba(255,255,255,0.15);color:white;border:1.5px solid rgba(255,255,255,0.3)}.btn-call:hover{background:rgba(255,255,255,0.25);transform:translateY(-2px)}
+.btn-email{background:transparent;color:white;border:1.5px solid rgba(255,255,255,0.25)}.btn-email:hover{background:rgba(255,255,255,0.1);transform:translateY(-2px)}
+footer{background:#1a1a2e;padding:64px 56px 32px}
+.footer-wrap{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-logo{display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:18px;cursor:pointer}
+.footer-logo img{height:120px;width:120px;object-fit:contain;border-radius:8px}
+.footer-desc{font-size:13px;line-height:1.8;color:var(--muted);margin-bottom:22px}
+.footer-social{display:flex;gap:10px}
+.f-soc{width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;font-size:14px;text-decoration:none;transition:background 0.2s;cursor:pointer}
+.f-soc:hover{background:var(--teal)}
+.footer-col h5{font-family:'Playfair Display',serif;color:var(--white);font-size:16px;font-weight:700;margin-bottom:18px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul li a{text-decoration:none;color:var(--muted);font-size:13px;cursor:pointer;transition:color 0.2s}
+.footer-col ul li a:hover{color:var(--teal)}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--muted)}
+.footer-bottom a{color:var(--amber);text-decoration:none}
+
+/* ═══ DESTINATION POPUP ═══ */
+#destPopup{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:500;backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px}
+.popup-content{background:var(--white);border-radius:24px;max-width:600px;width:100%;max-height:92vh;overflow-y:auto;box-shadow:0 40px 80px rgba(0,0,0,0.3);animation:popIn 0.4s cubic-bezier(0.34,1.56,0.64,1);position:relative;display:flex;flex-direction:column}
+.popup-header{padding:28px 32px 0;position:sticky;top:0;background:var(--white);z-index:2;border-radius:24px 24px 0 0;padding-bottom:16px;border-bottom:1px solid #f0ede6}
+.popup-close-btn{position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;background:#f0f0f0;border:none;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;color:#555;font-weight:700}
+.popup-close-btn:hover{background:#ddd}
+.popup-region{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ff6b35;margin-bottom:5px;display:block}
+.popup-h{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:3px}
+.popup-tagline{font-size:13px;color:#7a8a9a;margin-bottom:14px}
+.popup-price-bar{background:linear-gradient(135deg,#ff6b35,#ff4d8d);border-radius:12px;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.price-big{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:white}
+.price-note{font-size:11px;color:rgba(255,255,255,0.8);margin-top:2px}
+.price-asterisk{font-size:10px;color:rgba(255,255,255,0.75);text-align:right;max-width:200px;line-height:1.4;flex-shrink:0}
+.popup-body{padding:20px 32px}
+.incl-section{margin-bottom:18px}
+.incl-section-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ff6b35;margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid #ffe8d6}
+.itinerary-days{display:flex;flex-direction:column;gap:7px}
+.day-row{display:flex;gap:10px;align-items:flex-start;background:#fff5eb;border-radius:10px;padding:10px 12px}
+.day-badge{background:#ff6b35;color:white;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;margin-top:1px}
+.day-info{font-size:13px;color:var(--navy);line-height:1.5}
+.day-info strong{font-weight:600;display:block}
+.incl-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.incl-item{display:flex;gap:9px;align-items:flex-start;background:#f8f6f2;border-radius:10px;padding:9px 11px}
+.incl-item.highlight{background:linear-gradient(135deg,#fff0eb,#ffe4d6);border:1px solid rgba(255,107,53,0.2)}
+.incl-icon{font-size:15px;flex-shrink:0;margin-top:1px}
+.incl-text strong{display:block;font-size:12px;font-weight:700;color:var(--navy);margin-bottom:1px}
+.incl-text span{font-size:11px;color:#6a7a8a;line-height:1.35}
+.note-bar{background:#fffbea;border:1px solid #ffd23f;border-radius:10px;padding:10px 14px;font-size:12px;color:#7a5c00;line-height:1.55;margin-top:6px}
+.popup-footer{padding:16px 32px 24px;background:var(--white);border-radius:0 0 24px 24px;display:flex;gap:10px}
+.popup-btn-enquire{flex:1;background:linear-gradient(135deg,#ff6b35,#ff4d8d);color:white;padding:13px;border:none;border-radius:12px;font-weight:700;font-size:14px;cursor:pointer;transition:opacity 0.2s;font-family:'DM Sans',sans-serif}
+.popup-btn-enquire:hover{opacity:0.9}
+.popup-btn-custom{flex:1;background:transparent;border:2px solid #ff6b35;color:#ff6b35;padding:13px;border-radius:12px;font-weight:700;font-size:14px;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+.popup-btn-custom:hover{background:#fff5eb}
+
+/* ═══ BUDGET POPUP (reuse popup-content shell with green price bar) ═══ */
+.budget-price-bar-popup{background:linear-gradient(135deg,#06d6a0,#0096ff);border-radius:12px;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+
+/* ═══ AI TRIP BUILDER POPUP ═══ */
+#aiPopup{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:600;backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:16px}
+.ai-popup-content{background:#0d1117;border:1px solid rgba(124,58,237,0.3);border-radius:24px;max-width:640px;width:100%;max-height:92vh;overflow-y:auto;box-shadow:0 40px 80px rgba(0,0,0,0.5);animation:popIn 0.4s cubic-bezier(0.34,1.56,0.64,1);position:relative;display:flex;flex-direction:column}
+.ai-header{padding:28px 32px 20px;background:linear-gradient(135deg,rgba(124,58,237,0.2),rgba(168,85,247,0.1));border-bottom:1px solid rgba(255,255,255,0.08);border-radius:24px 24px 0 0;position:sticky;top:0;z-index:2}
+.ai-close-btn{position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.1);border:none;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#aaa;font-weight:700;transition:background 0.2s}
+.ai-close-btn:hover{background:rgba(255,255,255,0.2);color:white}
+.ai-title-row{display:flex;align-items:center;gap:12px;margin-bottom:4px}
+.ai-spark{font-size:28px}
+.ai-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--white)}
+.ai-subtitle{font-size:13px;color:rgba(255,255,255,0.5);margin-top:2px}
+.ai-body{padding:24px 32px;flex:1}
+/* Progress bar */
+.ai-progress{display:flex;gap:6px;margin-bottom:28px}
+.ai-step-dot{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,0.1);transition:background 0.3s}
+.ai-step-dot.done{background:linear-gradient(to right,#7c3aed,#a855f7)}
+.ai-step-dot.active{background:rgba(168,85,247,0.5)}
+/* Question block */
+.ai-question{margin-bottom:20px;animation:fadeSlide 0.3s ease}
+@keyframes fadeSlide{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.ai-q-label{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#a855f7;margin-bottom:8px;display:block}
+.ai-q-text{font-family:'Playfair Display',serif;font-size:18px;color:var(--white);margin-bottom:16px;line-height:1.35}
+/* Option chips */
+.ai-chips{display:flex;flex-wrap:wrap;gap:8px}
+.ai-chip{padding:9px 18px;border-radius:50px;border:1.5px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.7);font-size:13px;font-weight:500;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+.ai-chip:hover,.ai-chip.selected{background:rgba(124,58,237,0.3);border-color:#7c3aed;color:var(--white)}
+.ai-chip.multi-ok{background:rgba(124,58,237,0.25);border-color:#a855f7;color:white}
+/* Text input */
+.ai-text-input{width:100%;background:rgba(255,255,255,0.06);border:1.5px solid rgba(255,255,255,0.12);border-radius:12px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--white);outline:none;transition:border-color 0.2s;resize:none}
+.ai-text-input:focus{border-color:#7c3aed}
+.ai-text-input::placeholder{color:rgba(255,255,255,0.3)}
+/* Itinerary result */
+.ai-result{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:20px}
+.ai-result-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--white);margin-bottom:4px}
+.ai-result-meta{font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:16px}
+.ai-result-day{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,0.04);border-radius:10px;padding:10px 12px;margin-bottom:7px}
+.ai-result-badge{background:linear-gradient(135deg,#7c3aed,#a855f7);color:white;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0}
+.ai-result-text{font-size:13px;color:rgba(255,255,255,0.8);line-height:1.5}
+.ai-result-incl{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.ai-result-tag{background:rgba(124,58,237,0.2);border:1px solid rgba(124,58,237,0.3);color:#c4b5fd;font-size:11px;padding:4px 10px;border-radius:20px}
+.ai-price-note{background:rgba(255,210,63,0.1);border:1px solid rgba(255,210,63,0.3);border-radius:12px;padding:12px 16px;margin-top:14px;text-align:center}
+.ai-price-note p{font-size:13px;color:rgba(255,255,255,0.7);margin-bottom:8px}
+.ai-price-note strong{color:var(--amber)}
+/* Nav buttons */
+.ai-nav{display:flex;gap:10px;margin-top:20px}
+.ai-btn-next{flex:1;background:linear-gradient(135deg,#7c3aed,#a855f7);color:white;padding:13px;border:none;border-radius:12px;font-weight:700;font-size:14px;cursor:pointer;transition:opacity 0.2s;font-family:'DM Sans',sans-serif}
+.ai-btn-next:hover{opacity:0.9}
+.ai-btn-next:disabled{opacity:0.4;cursor:not-allowed}
+.ai-btn-back{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:13px 20px;border:1px solid rgba(255,255,255,0.1);border-radius:12px;font-weight:600;font-size:14px;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+.ai-btn-back:hover{background:rgba(255,255,255,0.1)}
+.ai-btn-send{flex:1;background:linear-gradient(135deg,#25d366,#1da851);color:white;padding:13px;border:none;border-radius:12px;font-weight:700;font-size:14px;cursor:pointer;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:8px}
+.ai-btn-send:hover{opacity:0.9}
+.ai-loading{text-align:center;padding:32px 0}
+.ai-loading-spinner{width:48px;height:48px;border:3px solid rgba(124,58,237,0.2);border-top-color:#a855f7;border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ai-loading p{color:rgba(255,255,255,0.6);font-size:14px}
+
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.7s,transform 0.7s}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+@keyframes popIn{from{opacity:0;transform:scale(0.92)}to{opacity:1;transform:scale(1)}}
+
+@media(max-width:960px){nav{padding:0 24px}section{padding:64px 24px}.hero{padding:100px 24px 64px}.serve-wrap{grid-template-columns:1fr}.promise-wrap{grid-template-columns:1fr}.dest-grid{grid-template-columns:1fr 1fr}.dest-card.wide{grid-column:1/3}.footer-wrap{grid-template-columns:1fr 1fr}.budget-grid{grid-template-columns:repeat(3,1fr)}.budget-section{padding:64px 24px}}
+@media(max-width:768px) and (orientation:portrait){.why-cards{grid-template-columns:1fr;gap:20px}.budget-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-links{display:none}.destinations{padding:64px 20px}.dest-grid{grid-template-columns:1fr 1fr}.dest-card.wide{grid-column:1/3}.popup-content{max-height:95vh}.popup-header{padding:20px 18px 14px}.popup-body{padding:14px 18px}.popup-footer{padding:12px 18px 20px;flex-direction:column}.incl-grid{grid-template-columns:1fr}.footer-wrap{grid-template-columns:1fr 1fr}.ai-body{padding:16px 18px}.ai-header{padding:20px 18px 16px}.budget-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.dest-grid{grid-template-columns:1fr}.dest-card.wide{grid-column:1}.footer-wrap{grid-template-columns:1fr}.hero-stat{padding:12px 20px 0 0 !important;border-right:none !important}.hero-stats{flex-direction:row;flex-wrap:wrap}.budget-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- DESTINATION POPUP -->
+<div id="destPopup">
+  <div class="popup-content">
+    <div class="popup-header">
+      <button class="popup-close-btn" onclick="closeDestPopup()">✕</button>
+      <span class="popup-region" id="popRegion">Asia</span>
+      <h2 class="popup-h" id="popTitle">Southeast Asia Explorer</h2>
+      <p class="popup-tagline" id="popTagline">10 Nights · 11 Days</p>
+      <div id="popPriceBar" class="popup-price-bar">
+        <div>
+          <div class="price-big" id="popPrice">₹1,15,000 / person</div>
+          <div class="price-note">All-inclusive · Twin sharing basis</div>
+        </div>
+        <div class="price-asterisk">*Flights based on round-trip from Mumbai. May vary from other cities.</div>
+      </div>
+    </div>
+    <div class="popup-body" id="popBody"></div>
+    <div class="popup-footer">
+      <button class="popup-btn-enquire" onclick="enquireNow()">✈️ Enquire Now</button>
+      <button class="popup-btn-custom" onclick="customiseTrip()">✏️ Customise My Trip</button>
+    </div>
+  </div>
+</div>
+
+<!-- AI TRIP BUILDER POPUP -->
+<div id="aiPopup">
+  <div class="ai-popup-content">
+    <div class="ai-header">
+      <button class="ai-close-btn" onclick="closeAI()">✕</button>
+      <div class="ai-title-row">
+        <span class="ai-spark">✨</span>
+        <div>
+          <div class="ai-title">AI Trip Builder</div>
+          <div class="ai-subtitle">Tell us your dream — we'll build your perfect itinerary</div>
+        </div>
+      </div>
+    </div>
+    <div class="ai-body">
+      <div class="ai-progress" id="aiProgress"></div>
+      <div id="aiStep"></div>
+      <div class="ai-nav" id="aiNav"></div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" onclick="document.location.href='#home';return false;">
+    <img src="logo.png" alt="Trips From India Logo"/>
+    <div class="nav-logo-name">Trips From <span>India</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a onclick="document.location.href='#why';return false;">Why Travel</a></li>
+    <li><a onclick="document.location.href='#destinations';return false;">Destinations</a></li>
+    <li><a onclick="document.location.href='#budget';return false;">Budget Trips</a></li>
+    <li><a class="nav-ai" onclick="openAI();return false;">✨ AI Trip Builder</a></li>
+    <li><a class="nav-cta" onclick="document.location.href='#contact';return false;">Plan My Trip</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-glow"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow">✈️ &nbsp;India's Newest Travel Brand</div>
+    <h1>The World is<br/><em>Closer</em> Than<br/>You Think</h1>
+    <p class="hero-sub">International travel, made shockingly affordable for every Indian. Explore destinations that often cost less than Ladakh or Andaman — and feel like a dream.</p>
+    <div class="hero-btns">
+      <a onclick="document.location.href='#destinations';return false;" class="btn-teal">🌍 &nbsp;Explore Destinations</a>
+      <a onclick="openAI();return false;" class="btn-ai-hero">✨ &nbsp;AI Trip Builder</a>
+      <a onclick="document.location.href='#contact';return false;" class="btn-outline">💬 &nbsp;Talk to Us</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="stat-n">15<span>+</span></div><div class="stat-l">Happy Trips Delivered</div></div>
+      <div class="hero-stat" style="padding:0 36px;"><div class="stat-n">30<span>+</span></div><div class="stat-l">Countries Covered</div></div>
+      <div class="hero-stat" style="padding:0 0 0 36px;"><div class="stat-n">₹40k</div><div class="stat-l">Trips Starting From</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="why-wrap">
+    <div class="why-top fade-up">
+      <span class="section-tag">Break the Myth</span>
+      <h2 class="section-h">International Travel is Not<br/><em>As Expensive As You Think</em></h2>
+      <p class="section-p">A trip to Thailand or Vietnam can literally cost less than a Ladakh holiday. We're here to prove it — and plan it for you.</p>
+    </div>
+    <div class="why-cards">
+      <div class="why-card fade-up"><div class="why-num">01</div><h3>Surprisingly Affordable</h3><p>SE Asia from ₹40,000. Europe from ₹1,20,000 all-inclusive. We negotiate hard on flights, hotels and tours so your international trip costs less than your Goa holiday in peak season.</p></div>
+      <div class="why-card fade-up"><div class="why-num">02</div><h3>Completely Hassle-Free</h3><p>Visa, flights, hotels, local transfers, guided tours, travel insurance — all sorted by us. You just pack your bags and show up. We handle every single detail.</p></div>
+      <div class="why-card fade-up"><div class="why-num">03</div><h3>Built for Indian Travellers</h3><p>Vegetarian food options, Hindi-friendly guides, culturally comfortable itineraries and group setups — we understand exactly what Indian travellers need abroad.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVE -->
+<section class="serve" id="about">
+  <div class="serve-wrap">
+    <div class="fade-up">
+      <span class="section-tag">Who We Travel With</span>
+      <h2 class="section-h">Every Indian<br/>Deserves to <em>Explore</em></h2>
+      <p class="section-p">We've built trips for every kind of Indian — budget explorers, established couples, and seniors who finally want to see the world on their own terms.</p>
+      <div class="serve-cards">
+        <div class="serve-card"><div class="serve-dot sd1">🎒</div><div><h4>Young & Budget Travellers</h4><p>International doesn't mean expensive. Bali, Bangkok, Vietnam — all for what you'd spend on Manali. Real experiences, genuine value.</p></div></div>
+        <div class="serve-card"><div class="serve-dot sd2">👫</div><div><h4>Couples in Their 40s & 50s</h4><p>You've made it in life but solo couple travel feels dull. Join our curated group trips — meet like-minded people, travel together, rediscover adventure.</p></div></div>
+        <div class="serve-card"><div class="serve-dot sd3">🧓</div><div><h4>Senior Travellers</h4><p>Slow-paced itineraries, wheelchair-friendly stays, porter assistance and full medical prep. Because age should never be a reason to stay home.</p></div></div>
+      </div>
+    </div>
+    <div class="serve-right fade-up">
+      <span class="section-tag">What Sets Us Apart</span>
+      <div class="serve-visual-cards">
+        <div class="svc svc1"><div class="svc-icon">🌏</div><div class="svc-text"><strong>30+ Countries Covered</strong><span>Asia · Europe · Africa · Americas · Oceania</span></div></div>
+        <div class="svc svc2"><div class="svc-icon">💸</div><div class="svc-text"><strong>Trips from ₹40,000</strong><span>All-inclusive. No hidden costs. Ever.</span></div></div>
+        <div class="svc svc3"><div class="svc-icon">♿</div><div class="svc-text"><strong>Senior-Friendly Always</strong><span>Wheelchair access, porter service, paced right</span></div></div>
+        <div class="svc svc4"><div class="svc-icon">📞</div><div class="svc-text"><strong>24/7 On-Trip Support</strong><span>Contact Us anytime, anywhere in the world</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="destinations" id="destinations">
+  <div class="dest-wrap">
+    <div class="dest-top fade-up">
+      <span class="section-tag">Where Will You Go Next</span>
+      <h2 class="section-h light">Handpicked <em>Itineraries</em> For You</h2>
+      <p class="section-p light">From the beaches of Bali to the Northern Lights of Norway.</p>
+    </div>
+    <div class="dest-tabs">
+      <button class="tab-btn active" onclick="showDest('asia',this)">🌏 &nbsp;Asia</button>
+      <button class="tab-btn" onclick="showDest('europe',this)">🏰 &nbsp;Europe</button>
+      <button class="tab-btn" onclick="showDest('world',this)">🌍 &nbsp;Rest of World</button>
+    </div>
+    <div class="dest-grid dest-panel active" id="dest-asia">
+      <div class="dest-card wide" onclick="openDestPopup('sea')"><div class="dest-bg" style="background-image:url('singapore.png')"></div><div class="dest-overlay"></div><div class="dest-info"><div class="dest-name">Southeast Asia Explorer</div><div class="dest-sub">Singapore · Malaysia · Thailand</div><span class="dest-price">From ₹1,15,000 / person</span></div></div>
+      <div class="dest-card" onclick="openDestPopup('bali')"><div class="dest-bg" style="background-image:url('bali.png')"></div><div class="dest-overlay"></div><div class="dest-info"><div class="dest-name">Bali</div><div class="dest-sub">Ubud · Seminyak · Uluwatu</div><span class="dest-price">From ₹85,000 / person</span></div></div>
+      <div class="dest-card" onclick="openDestPopup('vietnam')"><div class="dest-bg" style="background-image:url('vietnam.png')"></div><div class="dest-overlay"></div><div class="dest-info"><div class="dest-name">Vietnam</div><div class="dest-sub">Hanoi · Halong Bay · Ho Chi Minh</div><span class="dest-price">From ₹95,000 / person</span></div></div>
+      <div class="dest-card" onclick="openDestPopup('japankorea')"><div class="dest-bg" style="background-image:url('osaka.png')"></div><div class="dest-overlay"></div><div class="dest-info"><div class="dest-name">Japan + Korea</div><div class="dest-sub">Tokyo · Kyoto · Osaka · Seoul</div><span class="dest-price">From ₹2,25,000 / person</span></div></div>
+      <div class="dest-card" onclick="openDestPopup('maldives')"><div class="dest-bg" style="background-image:url('maldives.png')"></div><div class="dest-overlay"></div><div class="dest-info"><div class="dest-name">Maldives</div><div class="dest-sub">Overwater Villas · Snorkelling</div><span class="dest-price">From ₹1,25,000 / person</span></div></div>
+      <div class="dest-card" onclick="openDestPopup('thailand')"><div class="dest-bg" style="background-image:url('thailand.png')"></div><div class="dest-overlay"></div><div class="dest-info"><div class="dest-name">Thailand Beaches</div><div class="dest-sub">Phuket · Krabi · Bangkok</div><span class="dest-price">From ₹1,15,000 / person</span></div></div>
+    </div>
+    <div class="dest-grid dest-panel" id="dest-europe">
+      <div class="dest-card wide" onclick="openDestPopup('westerneurope')"><div class="dest-bg" style="background-image:url('paris.png')"></div><div class="dest-overlay"></div><div class="dest-info"><div class="dest-name">Western Europe</div><div class="dest-sub">Paris · Brussels · Amsterdam</div><span class="dest-price">From ₹2,55,000 / person</span></div></div>
+      <div class="dest-card" onclick="openDestPopup('swiss')"><div class="dest-bg" style="background-image:url('swiss.png')"></div><div class="dest-overlay"></div><div class="dest-info"><div class="dest-name">France & Switzerland</div><div class="dest-sub">Alps · Geneva · Interlaken</div><span class="dest-price">From ₹2,95,000 / person</span></div></div>
+      <div class="dest-card" onclick="openDestPopup('centraleurope')"><div class="dest-bg" style="background-image:url('budapest.png')"></div><div class="dest-overlay"></div><div class="dest-info"><div class="dest-name">Central Europe</div><div class="dest-sub">Budapest · Vienna · Prague</div><span class="dest-price">From ₹2,25,000 / person</span></div></div>
+      <div class="dest-card" onclick="openDestPopup('spain')"><div class="dest-bg" style="background-image:url('barca.png')"></div><div class="dest-overlay"></div><div class="dest-info"><div class="dest-name">Spain & Portugal</div><div class="dest-sub">Barcelona · Madrid · Lisbon</div><span class="dest-price">From ₹2,55,000 / person</span></div></div>
+      <div class="dest-card" onclick="openDestPopup('northernlights')"><div class="dest-bg" style="background-image:url('northern.png')"></div><div class="dest-overlay"></div><div class="dest-info"><div class="dest-name">Northern Lights</div><div class="dest-sub">Norway · Finland · Santa Village</div><span class="dest-price">From ₹2,95,000 / person</span></div></div>
+      <div class="dest-card" onclick="openDestPopup('italy')"><div class="dest-bg" style="background-image:url('milan.png')"></div><div class="dest-overlay"></div><div class="dest-info"><div class="dest-name">Italian Dream</div><div class="dest-sub">Rome · Florence · Venice · Amalfi</div><span class="dest-price">From ₹2,55,000 / person</span></div></div>
+    </div>
+    <div class="dest-grid dest-panel" id="dest-world">
+      <div class="dest-card wide" onclick="openDestPopup('usa')"><div class="dest-bg" style="background-image:url('usa.png')"></div><div class="dest-overlay"></div><div class="dest-info"><div class="dest-name">USA + Canada</div><div class="dest-sub">New York · Niagara · Toronto · Los Angeles</div><span class="dest-price">From ₹3,25,000 / person</span></div></div>
+      <div class="dest-card" onclick="openDestPopup('australia')"><div class="dest-bg" style="background-image:url('aus.png')"></div><div class="dest-overlay"></div><div class="dest-info"><div class="dest-name">Australia & New Zealand</div><div class="dest-sub">Sydney · Melbourne · Auckland</div><span class="dest-price">From ₹2,75,000 / person</span></div></div>
+      <div class="dest-card" onclick="openDestPopup('africa')"><div class="dest-bg" style="background-image:url('africa.png')"></div><div class="dest-overlay"></div><div class="dest-info"><div class="dest-name">Wild Africa</div><div class="dest-sub">Masai Mara · Serengeti · Nairobi</div><span class="dest-price">From ₹2,95,000 / person</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BUDGET SECTION ══ -->
+<section class="budget-section" id="budget">
+  <div class="budget-wrap">
+    <div class="budget-top fade-up">
+      <div class="budget-badge">🔥 &nbsp;Limited Budget, Unlimited Experience</div>
+      <h2 class="budget-heading">Trips Under <span class="strike-num">₹50,000</span></h2>
+      <p class="budget-sub">Yes, a real international trip for under fifty thousand rupees. Flights, hotel, breakfast & dinner, activities — all included. This is not a drill.</p>
+    </div>
+    <div class="budget-grid fade-up">
+      <div class="budget-card" onclick="openDestPopup('b_thailand')">
+        <div class="budget-emoji">🇹🇭</div>
+        <div class="budget-dest">Budget Bangkok</div>
+        <div class="budget-nights">3 Nights · 4 Days</div>
+        <div class="budget-price-tag">From ₹40,000</div>
+        <div class="budget-tags">
+          <span class="budget-tag">✈️ Flights</span>
+          <span class="budget-tag">🏨 Hotel</span>
+          <span class="budget-tag">🍽️ B+D</span>
+          <span class="budget-tag">🗺️ Tour</span>
+        </div>
+        <div class="budget-card-cta">View Inclusions →</div>
+      </div>
+      <div class="budget-card" onclick="openDestPopup('b_singapore')">
+        <div class="budget-emoji">🇸🇬</div>
+        <div class="budget-dest">Singapore on a Budget</div>
+        <div class="budget-nights">3 Nights · 4 Days</div>
+        <div class="budget-price-tag">From ₹45,000</div>
+        <div class="budget-tags">
+          <span class="budget-tag">✈️ Flights</span>
+          <span class="budget-tag">🏨 Hotel</span>
+          <span class="budget-tag">🍽️ B+D</span>
+          <span class="budget-tag">🌿 Gardens</span>
+        </div>
+        <div class="budget-card-cta">View Inclusions →</div>
+      </div>
+      <div class="budget-card" onclick="openDestPopup('b_dubai')">
+        <div class="budget-emoji">🇦🇪</div>
+        <div class="budget-dest">Dubai Express</div>
+        <div class="budget-nights">3 Nights · 4 Days</div>
+        <div class="budget-price-tag">From ₹40,000</div>
+        <div class="budget-tags">
+          <span class="budget-tag">✈️ Flights</span>
+          <span class="budget-tag">🏨 Hotel</span>
+          <span class="budget-tag">🍽️ B+D</span>
+          <span class="budget-tag">🏙️ City Tour</span>
+        </div>
+        <div class="budget-card-cta">View Inclusions →</div>
+      </div>
+      <div class="budget-card" onclick="openDestPopup('b_dubaiAD')">
+        <div class="budget-emoji">🌇</div>
+        <div class="budget-dest">Dubai + Abu Dhabi</div>
+        <div class="budget-nights">4 Nights · 5 Days</div>
+        <div class="budget-price-tag">From ₹50,000</div>
+        <div class="budget-tags">
+          <span class="budget-tag">✈️ Flights</span>
+          <span class="budget-tag">🏨 Hotel</span>
+          <span class="budget-tag">🍽️ B+D</span>
+          <span class="budget-tag">🕌 2 Cities</span>
+        </div>
+        <div class="budget-card-cta">View Inclusions →</div>
+      </div>
+      <div class="budget-card" onclick="openDestPopup('b_nepal')">
+        <div class="budget-emoji">🇳🇵</div>
+        <div class="budget-dest">Nepal — Kathmandu</div>
+        <div class="budget-nights">3 Nights · 4 Days</div>
+        <div class="budget-price-tag">From ₹40,000</div>
+        <div class="budget-tags">
+          <span class="budget-tag">✈️ Flights</span>
+          <span class="budget-tag">🏨 Hotel</span>
+          <span class="budget-tag">🍽️ B+D</span>
+          <span class="budget-tag">⛩️ Temples</span>
+        </div>
+        <div class="budget-card-cta">View Inclusions →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section class="promise" id="promise">
+  <div class="promise-wrap">
+    <div class="fade-up">
+      <span class="section-tag">Why Choose Us</span>
+      <h2 class="section-h">Our <em>Promise</em><br/>to Every Traveller</h2>
+      <p class="section-p">We're not just a travel agency. We're your companion from the first call to the last boarding gate — and everything in between.</p>
+      <div class="promise-list">
+        <div class="p-item"><div class="p-num">1</div><div><h4>100% Transparent Pricing</h4><p>No hidden charges. We break down every rupee so you always know exactly what you're paying for.</p></div></div>
+        <div class="p-item"><div class="p-num">2</div><div><h4>End-to-End Trip Management</h4><p>Visa, flights, hotels, transfers, guides, insurance — every detail handled so your holiday is truly stress-free.</p></div></div>
+        <div class="p-item"><div class="p-num">3</div><div><h4>Senior-First Comfort</h4><p>Wheelchair-friendly options, baggage assistance, slow-paced itineraries — because everyone deserves to travel.</p></div></div>
+        <div class="p-item"><div class="p-num">4</div><div><h4>24/7 On-Trip Support</h4><p>Problem at 2am in Bangkok? Contact Us directly. We're always on standby, anywhere in the world.</p></div></div>
+      </div>
+    </div>
+    <div class="promise-box fade-up">
+      <div class="pb-title">What's Included</div>
+      <div class="pb-sub">Every package from Trips From India covers:</div>
+      <div class="pb-items">
+        <div class="pb-item"><div class="pb-icon">✈️</div><div class="pb-text"><strong>Return Flights</strong><span>Best-priced tickets from your city</span></div></div>
+        <div class="pb-item"><div class="pb-icon">🚖</div><div class="pb-text"><strong>Airport Transfers</strong><span>Pick-up & drop at every destination airport</span></div></div>
+        <div class="pb-item"><div class="pb-icon">🏨</div><div class="pb-text"><strong>Hotel Stays</strong><span>Curated, comfort-first accommodation</span></div></div>
+        <div class="pb-item"><div class="pb-icon">🗺️</div><div class="pb-text"><strong>Guided Sightseeing</strong><span>English + Hindi-friendly local guides</span></div></div>
+        <div class="pb-item"><div class="pb-icon">📋</div><div class="pb-text"><strong>Visa Assistance</strong><span>We guide you through every document</span></div></div>
+        <div class="pb-item"><div class="pb-icon">🍽️</div><div class="pb-text"><strong>Breakfast & Dinner Included</strong><span>Vegetarian & Indian options always available</span></div></div>
+        <div class="pb-item"><div class="pb-icon">🛡️</div><div class="pb-text"><strong>Travel Insurance</strong><span>Full coverage for complete peace of mind</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <span class="section-tag">Let's Start Planning</span>
+  <h2 class="section-h">Your Dream Trip is<br/><em style="color:rgba(10,22,40,0.8);">One Message Away</em></h2>
+  <p class="cta-sub">Tell us where you want to go — we'll send you a free personalised itinerary within 24 hours. No commitment needed.</p>
+  <form id="enquiryForm" class="cta-form" onsubmit="submitToGoogle(event)">
+    <input type="text" id="fname" class="cta-input" placeholder="Your Name" required/>
+    <input type="tel" id="fphone" class="cta-input" placeholder="WhatsApp Number" required/>
+    <input type="text" id="fdest" class="cta-input" placeholder="Dream Destination…"/>
+    <button type="submit" class="cta-submit">Get Free Itinerary →</button>
+  </form>
+  <p id="formMsg">✅ Got it! We will contact you within 24 hours.</p>
+  <div class="cta-or">— or reach us directly —</div>
+  <div class="cta-contact-row">
+    <a href="https://wa.me/919324432129?text=Hi%20Trips%20From%20India!%20I%27d%20like%20to%20plan%20a%20trip." class="btn-wa" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp: +91 93244 32129</a>
+    <a href="tel:+919324432129" class="btn-call">📞 +91 93244 32129</a>
+    <a href="mailto:info.tripsfromindia@gmail.com" class="btn-email">✉️ Email Us</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-wrap">
+    <div>
+      <a class="footer-logo" onclick="document.location.href='#home';return false;">
+        <img src="logo.png" alt="Trips From India"/>
+        <div class="nav-logo-name" style="font-size:17px;">Trips From <span>India</span></div>
+      </a>
+      <p class="footer-desc">Making international travel accessible, affordable and unforgettable for every Indian — families, couples, seniors and young explorers alike.</p>
+      <div class="footer-social"><a class="f-soc" href="#">📸</a><a class="f-soc" href="#">💬</a><a class="f-soc" href="#">📘</a></div>
+    </div>
+    <div class="footer-col"><h5>Destinations</h5><ul><li><a onclick="document.location.href='#destinations';return false;">Southeast Asia</a></li><li><a onclick="openDestPopup('bali');return false;">Bali & Vietnam</a></li><li><a onclick="openDestPopup('japankorea');return false;">Japan & Korea</a></li><li><a onclick="document.location.href='#destinations';return false;">Europe</a></li><li><a onclick="openDestPopup('africa');return false;">Africa Safari</a></li><li><a onclick="openDestPopup('usa');return false;">USA & Canada</a></li></ul></div>
+    <div class="footer-col"><h5>Travel For</h5><ul><li><a onclick="document.location.href='#about';return false;">Couples</a></li><li><a onclick="document.location.href='#about';return false;">Senior Travel</a></li><li><a onclick="document.location.href='#about';return false;">Group Trips</a></li><li><a onclick="document.location.href='#about';return false;">Honeymoon</a></li><li><a onclick="document.location.href='#about';return false;">Solo Travel</a></li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul><li><a href="https://wa.me/919324432129" target="_blank">💬 WhatsApp Us</a></li><li><a href="tel:+919324432129">📞 +91 93244 32129</a></li><li><a href="mailto:info.tripsfromindia@gmail.com">✉️ info.tripsfromindia@gmail.com</a></li><li><a href="https://tripsfromindia.in" target="_blank">🌐 tripsfromindia.in</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Trips From India. All rights reserved.</span><span>Made with ❤️ for Indian travellers &nbsp;·&nbsp; <a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a></span></div>
+</footer>
+
+<script>
+/* ───────────────────────────────────────────
+   DESTINATION DATA — all trips including budget
+─────────────────────────────────────────── */
+const D = {
+  sea:{region:'🌏 Asia',title:'Southeast Asia Explorer',tagline:'10 Nights · 11 Days · Singapore → Kuala Lumpur → Phuket → Krabi',price:'₹1,15,000 / person',days:[{b:'Day 1–3',c:'🇸🇬 Singapore (3 Nights)',d:'3-star city-centre hotel near MRT · Clarke Quay, Gardens by the Bay, Sentosa'},{b:'Day 4–5',c:'🇲🇾 Kuala Lumpur, Malaysia (2 Nights)',d:'3-star hotel near KLCC · Coach transfer from Singapore included'},{b:'Day 6–8',c:'🇹🇭 Phuket, Thailand (3 Nights)',d:'3-star beach resort · Flight KL→Phuket (cabin baggage only)*'},{b:'Day 9–10',c:'🇹🇭 Krabi (2 Nights)',d:'3-star resort · Speedboat transfer from Phuket included'},{b:'Day 11',c:'✈️ Return to Mumbai',d:'Airport transfer to Phuket/Krabi airport · Return flight'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Singapore & Phuket/Krabi → Mumbai',h:true},{i:'🛫',t:'Internal Flight: KL → Phuket',d:'Cabin baggage (7 kg) only included*',h:true},{i:'🚌',t:'Singapore → KL Coach',d:'Intercity luxury coach transfer included',h:true},{i:'🚖',t:'All Airport Transfers',d:'Pick-up & drop at every airport throughout the trip',h:true},{i:'🚤',t:'Speedboat: Phuket → Krabi',d:'Speedboat island-hop transfer included'},{i:'🏨',t:'10 Nights Hotel',d:'3-star, city-centre & beach stays, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 10 days · Veg options always available'},{i:'🦁',t:'Singapore Zoo',d:'Full admission + guided tram ride included'},{i:'🌆',t:'Marina Bay Sands SkyPark',d:'Observation deck (57th floor) admission'},{i:'🌿',t:'Gardens by the Bay',d:'Evening visit + free Spectra light show'},{i:'🗼',t:'Petronas Towers Deck',d:'Observation deck admission, KL'},{i:'🏝️',t:'Phi Phi Islands Boat Tour',d:'Half-day speedboat snorkelling, Krabi'},{i:'🤿',t:'Phuket Snorkelling Tour',d:'Half-day speedboat snorkelling trip'},{i:'📋',t:'Visa Assistance',d:'Singapore e-visa & Thailand VOA guidance'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive coverage for full trip'}],
+  note:'*Internal flight KL→Phuket: cabin baggage (7 kg) only. Check-in baggage must be purchased at extra cost if required.'},
+
+  bali:{region:'🌏 Asia',title:'Bali — Island of Gods',tagline:'6 Nights · 7 Days · Ubud → Seminyak → Uluwatu',price:'₹85,000 / person',days:[{b:'Day 1–2',c:'🌿 Ubud (2 Nights)',d:'3-star boutique villa near rice terraces · Arrival, orientation walk'},{b:'Day 3–5',c:'🏖️ Seminyak / Kuta (3 Nights)',d:'3-star beach hotel · Transfer from Ubud included'},{b:'Day 6',c:'🌅 Uluwatu (Day Trip)',d:'Return transfers from Seminyak · Temple visit + Kecak fire show'},{b:'Day 7',c:'✈️ Return to Mumbai',d:'Airport transfer · Bali → Mumbai'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Bali (Denpasar) & return',h:true},{i:'🚖',t:'All Airport Transfers',d:'Arrival & departure airport transfers included',h:true},{i:'🏨',t:'6 Nights Hotel',d:'3-star boutique villas & beach hotels, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 6 days · Indian & veg options available'},{i:'🌾',t:'Tegallalang Rice Terraces',d:'Guided walk through iconic stepped terraces'},{i:'🐒',t:'Sacred Monkey Forest',d:'Ubud Monkey Forest admission included'},{i:'🕍',t:'Ubud Cultural Tour',d:'Temple, art market & traditional Kecak dance show'},{i:'🌋',t:'Mount Batur Sunrise Trek',d:'Early morning guided trek + breakfast at summit'},{i:'🕌',t:'Tanah Lot Sunset Visit',d:'Famous sea temple visit at golden hour'},{i:'🌊',t:'Uluwatu Temple + Kecak Show',d:'Clifftop temple + evening Kecak fire dance'},{i:'🏄',t:'Beginner Surf Lesson',d:'1-hour guided surf lesson, Seminyak/Kuta'},{i:'🚌',t:'All Intercity Transfers',d:'Ubud → Seminyak → Airport, all included'},{i:'📋',t:'Visa on Arrival Assistance',d:'Bali VOA guidance for Indian passport holders'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive coverage for full trip'}],
+  note:'Bali is perfect for honeymoon, couples & first-time international travellers. Great for all ages.'},
+
+  vietnam:{region:'🌏 Asia',title:'Vietnam — North to South',tagline:'7 Nights · 8 Days · Hanoi → Halong Bay → Da Nang → Ho Chi Minh City',price:'₹95,000 / person',days:[{b:'Day 1–2',c:'🏛️ Hanoi (2 Nights)',d:'3-star Old Quarter hotel · Hoan Kiem Lake, Temple of Literature, street food tour'},{b:'Day 3–4',c:'⛵ Halong Bay (1 Night Cruise)',d:'Traditional junk boat cruise · All meals on board · Kayaking · Cave visit included'},{b:'Day 5–6',c:'🌉 Da Nang (2 Nights)',d:'3-star beach hotel · Flight Hanoi→Da Nang (cabin baggage only)*'},{b:'Day 7–8',c:'🏙️ Ho Chi Minh City (1 Night)',d:'3-star city hotel · Flight Da Nang→HCMC (cabin baggage only)*'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Hanoi & Ho Chi Minh City → Mumbai',h:true},{i:'🛫',t:'2 Internal Flights',d:'Hanoi→Da Nang & Da Nang→HCMC (cabin baggage only)*',h:true},{i:'🚖',t:'All Airport Transfers',d:'Pick-up & drop at all airports throughout the trip',h:true},{i:'⛵',t:'Halong Bay 1N/2D Cruise',d:'Junk boat · all meals on board · kayaking · cave tour'},{i:'🏨',t:'7 Nights Stay',d:'3-star hotels + cruise cabin, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All land days · All meals on cruise'},{i:'🏛️',t:'Hanoi City Tour',d:'Ho Chi Minh Mausoleum, Old Quarter, Hoan Kiem'},{i:'🌉',t:'Hoi An Ancient Town',d:'Day trip from Da Nang + guided walking tour'},{i:'🚠',t:'Ba Na Hills (Golden Bridge)',d:'Cable car + Ba Na Hills admission from Da Nang'},{i:'🕳️',t:'Cu Chi Tunnels',d:'Guided half-day tour, Ho Chi Minh City'},{i:'📋',t:'Vietnam e-Visa',d:'e-Visa application assistance for Indian passport holders'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive coverage for full trip'}],
+  note:'*Both internal flights include cabin baggage (7 kg) only. Check-in baggage to be purchased separately if required.'},
+
+  japankorea:{region:'🌏 Asia',title:'Japan + Korea — East Asia Magic',tagline:'11 Nights · 12 Days · Tokyo → Kyoto → Osaka → Seoul',price:'₹2,25,000 / person',days:[{b:'Day 1–3',c:'🗼 Tokyo (3 Nights)',d:'3-star Shinjuku/Shibuya hotel · Shibuya Crossing, Asakusa, Akihabara, Odaiba'},{b:'Day 4–5',c:'⛩️ Kyoto (2 Nights)',d:'3-star central Kyoto hotel · Shinkansen from Tokyo · Fushimi Inari, Arashiyama'},{b:'Day 6–8',c:'🍜 Osaka (3 Nights)',d:'3-star Namba hotel · Day trip to Nara · Universal Studios Japan'},{b:'Day 9–11',c:'🇰🇷 Seoul (3 Nights)',d:'3-star Myeongdong hotel · Flight: Osaka→Seoul (cabin baggage only)*'},{b:'Day 12',c:'✈️ Return to Mumbai',d:'Airport transfer · Incheon → Mumbai return flight'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Tokyo & Seoul (Incheon) → Mumbai',h:true},{i:'🚅',t:'Tokyo → Kyoto Shinkansen',d:'Bullet train reserved seat tickets included',h:true},{i:'🛫',t:'Internal Flight: Osaka → Seoul',d:'Cabin baggage (7 kg) only included*',h:true},{i:'🚖',t:'All Airport Transfers',d:'Pick-up & drop at Tokyo, Osaka & Seoul airports',h:true},{i:'🏨',t:'11 Nights Hotel',d:'3-star hotels in prime locations, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 11 days · Veg options available'},{i:'🗼',t:'Tokyo Skytree Observation Deck',d:'Entry to the world\'s tallest tower included'},{i:'🎡',t:'Universal Studios Japan',d:'1-day park ticket, Osaka'},{i:'⛩️',t:'Fushimi Inari & Arashiyama',d:'Guided visit to Kyoto\'s iconic attractions'},{i:'🦌',t:'Nara Deer Park Day Trip',d:'Todai-ji Temple + free-roaming deer park'},{i:'🏯',t:'Osaka Castle',d:'Admission + museum entry'},{i:'🏰',t:'Gyeongbokgung Palace',d:'Entry + traditional Hanbok rental, Seoul'},{i:'🛍️',t:'Seoul City Tour',d:'Myeongdong, N Seoul Tower, Bukchon Hanok Village'},{i:'📋',t:'Japan Visa Assistance',d:'Full documentation support for Japan tourist visa'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive coverage for full trip'}],
+  note:'*Osaka→Seoul internal flight: cabin baggage (7 kg) only. Check-in baggage extra. Japan requires a formal visa — we provide complete documentation support.'},
+
+  maldives:{region:'🌏 Asia',title:'Maldives — Paradise on Earth',tagline:'5 Nights · 6 Days · Malé → Resort Island',price:'₹1,25,000 / person',days:[{b:'Day 1',c:'🛬 Arrival in Malé',d:'Flight from Mumbai → Malé · Airport transfer to speedboat jetty'},{b:'Day 2–5',c:'🏝️ Resort Island (4 Nights)',d:'Beach villa or water bungalow · All-inclusive resort stay'},{b:'Day 6',c:'✈️ Return to Mumbai',d:'Speedboat → Malé airport · Return flight to Mumbai'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Malé (Velana International) & return',h:true},{i:'🚤',t:'Speedboat Transfers (Both Ways)',d:'Malé airport ↔ resort island, fully included',h:true},{i:'🚖',t:'Airport to Jetty Transfer',d:'Malé airport to speedboat jetty, both ways',h:true},{i:'🏨',t:'5 Nights Resort Stay',d:'3–4 star beach villa or water bungalow, twin sharing'},{i:'🍽️',t:'All Meals (Full Board)',d:'Breakfast, lunch & dinner · All 5 days at resort'},{i:'🤿',t:'House Reef Snorkelling',d:'Guided snorkelling with equipment at resort reef'},{i:'🐢',t:'Coral Garden Boat Trip',d:'Snorkelling boat trip to coral garden included'},{i:'🐬',t:'Sunset Dolphin Watch Cruise',d:'Evening dolphin-watching cruise included'},{i:'🎣',t:'Night Fishing Trip',d:'Traditional night fishing with local fishermen'},{i:'🚣',t:'Non-Motorised Water Sports',d:'Kayaking & paddleboard complimentary at resort'},{i:'📋',t:'Visa on Arrival',d:'Free on arrival for Indian passport holders'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive coverage for full trip'}],
+  note:'Motorised water sports (jet ski, parasailing, scuba diving) are not included and can be booked at the resort. Ideal for couples and honeymoon travel.'},
+
+  thailand:{region:'🌏 Asia',title:'Thailand — Bangkok, Phuket & Krabi',tagline:'7 Nights · 8 Days · Bangkok → Phuket → Krabi',price:'₹1,15,000 / person',days:[{b:'Day 1–2',c:'🏙️ Bangkok (2 Nights)',d:'3-star hotel near BTS Skytrain · Grand Palace, Wat Arun, floating market'},{b:'Day 3–5',c:'🏖️ Phuket (3 Nights)',d:'3-star beach hotel Patong/Kata · Flight: Bangkok→Phuket (cabin baggage only)*'},{b:'Day 6–7',c:'🌴 Krabi (2 Nights)',d:'3-star resort · Speedboat transfer from Phuket included'},{b:'Day 8',c:'✈️ Return to Mumbai',d:'Airport transfer · Krabi Airport → Mumbai return flight'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Bangkok & Krabi → Mumbai',h:true},{i:'🛫',t:'Internal Flight: Bangkok → Phuket',d:'Cabin baggage (7 kg) only included*',h:true},{i:'🚖',t:'All Airport Transfers',d:'Pick-up & drop at Bangkok, Phuket & Krabi airports',h:true},{i:'🚤',t:'Speedboat: Phuket → Krabi',d:'Speedboat island-hop transfer included'},{i:'🏨',t:'7 Nights Hotel',d:'3-star beach hotels, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 7 days · Veg options available'},{i:'🛺',t:'Bangkok City Tour',d:'Grand Palace, Wat Arun, Wat Pho — guided half-day'},{i:'🚤',t:'James Bond Island Speedboat',d:'Full-day Phang Nga Bay speedboat tour'},{i:'🏝️',t:'Phi Phi Islands Snorkelling',d:'Half-day speedboat snorkelling tour, Krabi'},{i:'🌊',t:'Four Islands Krabi',d:'Full-day four islands snorkelling excursion'},{i:'🌅',t:'Railay Beach Day Trip',d:'Longtail boat to Railay Beach from Krabi'},{i:'📋',t:'Thailand Visa on Arrival',d:'Guidance for VOA — Indians are eligible'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive coverage for full trip'}],
+  note:'*Bangkok→Phuket internal flight: cabin baggage (7 kg) only. Check-in baggage extra.'},
+
+  westerneurope:{region:'🏰 Europe',title:'Western Europe — Paris, Brussels & Amsterdam',tagline:'8 Nights · 9 Days · Paris → Brussels → Amsterdam',price:'₹2,55,000 / person',days:[{b:'Day 1–3',c:'🗼 Paris (3 Nights)',d:'3-star city-centre hotel near Metro · Arrival, Eiffel Tower, Louvre, Seine cruise'},{b:'Day 4–5',c:'🍫 Brussels (2 Nights)',d:'3-star hotel near Grand Place · High-speed train from Paris included'},{b:'Day 6–8',c:'🌷 Amsterdam (3 Nights)',d:'3-star canal district hotel · Train from Brussels · Canals, museums, day trips'},{b:'Day 9',c:'✈️ Return to Mumbai',d:'Airport transfer · Amsterdam Schiphol → Mumbai return flight'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Paris (CDG) & Amsterdam → Mumbai',h:true},{i:'🚄',t:'Paris → Brussels Train',d:'Eurostar/Thalys high-speed train included',h:true},{i:'🚄',t:'Brussels → Amsterdam Train',d:'Inter-city rail included',h:true},{i:'🚖',t:'All Airport Transfers',d:'CDG & AMS airport pick-up & drop included',h:true},{i:'🏨',t:'8 Nights Hotel',d:'3-star, city-centre near Metro/tram, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 8 days · Veg options available'},{i:'🗼',t:'Eiffel Tower — Summit Access',d:'Priority entry ticket to the very top, Paris'},{i:'🖼️',t:'Louvre Museum Guided Tour',d:'Skip-the-line guided visit including Mona Lisa'},{i:'⛵',t:'Seine River Cruise',d:'1-hour evening cruise on the Seine'},{i:'🎢',t:'Disneyland Paris',d:'1-day single-park Disneyland Paris ticket'},{i:'🏛️',t:'Brussels Grand Place & Atomium',d:'Guided city tour — Manneken Pis, Atomium'},{i:'🌷',t:'Keukenhof Gardens',d:'Entry included (open Mar–May; alternate activity off-season)'},{i:'🚢',t:'Amsterdam Canal Cruise',d:'1-hour glass-roof boat canal tour'},{i:'🚲',t:'Amsterdam City Bike Tour',d:'2-hour guided cycling tour of the city'},{i:'📋',t:'Schengen Visa Assistance',d:'Full documentation guidance for Schengen tourist visa'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive Europe travel insurance'}],
+  note:'Keukenhof Gardens open only March–May. Off-season travellers will visit the Van Gogh Museum or Anne Frank House instead.'},
+
+  swiss:{region:'🏰 Europe',title:'France & Switzerland — Alps & Romance',tagline:'10 Nights · 11 Days · Paris → Nice → Geneva → Interlaken → Zurich',price:'₹2,95,000 / person',days:[{b:'Day 1–3',c:'🗼 Paris (3 Nights)',d:'3-star Metro hotel · Eiffel Tower summit, Louvre, Versailles day trip'},{b:'Day 4–5',c:'🌊 Nice, French Riviera (2 Nights)',d:'3-star city hotel · TGV train from Paris included'},{b:'Day 6–7',c:'🏔️ Geneva + Montreux (2 Nights)',d:'3-star Geneva hotel · Train from Nice · Lake Geneva cruise, Chateau de Chillon'},{b:'Day 8–9',c:'🏔️ Interlaken (2 Nights)',d:'3-star alpine guesthouse · Mt Titlis full-day excursion'},{b:'Day 10–11',c:'✈️ Zurich (1 Night + Departure)',d:'3-star Zurich hotel · Old Town walk · Airport transfer · Zurich → Mumbai'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Paris (CDG) & Zurich → Mumbai',h:true},{i:'🚄',t:'All Inter-City Trains',d:'Paris→Nice, Nice→Geneva, Geneva→Interlaken, Interlaken→Zurich',h:true},{i:'🚖',t:'All Airport Transfers',d:'CDG arrival & ZRH departure airport transfers',h:true},{i:'🏨',t:'10 Nights Hotel',d:'3-star hotels near stations & public transport, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 10 days · Veg options available'},{i:'🗼',t:'Eiffel Tower — Summit Access',d:'Priority entry to the summit level, Paris'},{i:'🏰',t:'Versailles Palace & Gardens',d:'Skip-the-line entry + guided tour'},{i:'⛵',t:'Seine River Cruise',d:'1-hour evening cruise on the Seine, Paris'},{i:'🌊',t:'Nice & French Riviera Walk',d:'Guided walking tour of Old Town & Promenade'},{i:'🏔️',t:'Mt Titlis — Full Day',d:'Cable car, revolving gondola, glacier walk, Cliff Walk'},{i:'🛶',t:'Lake Geneva Scenic Cruise',d:'1-hour cruise on Lake Geneva'},{i:'🏰',t:'Chateau de Chillon',d:'Entry to the lakeside castle, Montreux'},{i:'📋',t:'Schengen Visa Assistance',d:'Covers both France & Switzerland'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive coverage for full trip'}],
+  note:'Switzerland is expensive — this package is priced to include Mt Titlis (the signature Swiss snow experience).'},
+
+  centraleurope:{region:'🏰 Europe',title:'Central Europe — Budapest, Vienna & Prague',tagline:'8 Nights · 9 Days · Budapest → Vienna → Prague',price:'₹2,25,000 / person',days:[{b:'Day 1–3',c:'🏰 Budapest (3 Nights)',d:'3-star hotel near Danube · Arrival; Buda Castle, Parliament, thermal baths, Danube cruise'},{b:'Day 4–5',c:'🎶 Vienna (2 Nights)',d:'3-star central Vienna hotel · Train from Budapest · Schönbrunn, Ring Road, evening concert'},{b:'Day 6–8',c:'🍺 Prague (3 Nights)',d:'3-star Old Town hotel · Train from Vienna · Charles Bridge, Prague Castle, Old Town Square'},{b:'Day 9',c:'✈️ Return to Mumbai',d:'Airport transfer · Prague Václav Havel → Mumbai return flight'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Budapest & Prague → Mumbai',h:true},{i:'🚄',t:'Budapest → Vienna Train',d:'Inter-city rail included',h:true},{i:'🚄',t:'Vienna → Prague Train',d:'Inter-city rail included',h:true},{i:'🚖',t:'All Airport Transfers',d:'BUD arrival & PRG departure airport transfers',h:true},{i:'🏨',t:'8 Nights Hotel',d:'3-star hotels near city centres, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 8 days · Veg options available'},{i:'🏰',t:'Buda Castle & Fishermen\'s Bastion',d:'Guided citadel tour with panoramic Danube views'},{i:'🛁',t:'Széchenyi Thermal Bath',d:'3-hour thermal spa session, Budapest'},{i:'🚢',t:'Danube River Evening Cruise',d:'1-hour illuminated cruise, Budapest'},{i:'🎠',t:'Schönbrunn Palace Vienna',d:'Entry ticket + guided tour of imperial palace'},{i:'🎵',t:'Vienna Classical Concert',d:'Evening concert in a historic Viennese hall'},{i:'🌉',t:'Charles Bridge & Prague Castle',d:'Guided walking tour of historic Old Prague'},{i:'🏛️',t:'Prague Astronomical Clock',d:'Old Town Square + Jewish Quarter guided visit'},{i:'📋',t:'Schengen Visa Assistance',d:'Full documentation guidance for Schengen visa'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive coverage for full trip'}],
+  note:'Central Europe offers stunning architecture, great food, and far fewer crowds than Paris or London — a brilliant first Europe trip.'},
+
+  spain:{region:'🏰 Europe',title:'Spain & Portugal — Sun, Tapas & History',tagline:'9 Nights · 10 Days · Lisbon → Porto → Madrid → Barcelona',price:'₹2,55,000 / person',days:[{b:'Day 1–2',c:'🏛️ Lisbon (2 Nights)',d:'3-star Baixa district hotel · Belem Tower, Jerónimos Monastery, Alfama, tram rides'},{b:'Day 3–4',c:'🍷 Porto (2 Nights)',d:'3-star city hotel · Train from Lisbon · Ribeira, wine caves, Douro cruise'},{b:'Day 5–6',c:'🏟️ Madrid (2 Nights)',d:'3-star central hotel · Flight Porto→Madrid (cabin baggage only)* · Prado, Retiro Park'},{b:'Day 7–9',c:'🏖️ Barcelona (3 Nights)',d:'3-star hotel near Las Ramblas · AVE bullet train from Madrid · Sagrada, Gaudí'},{b:'Day 10',c:'✈️ Return to Mumbai',d:'Airport transfer · Barcelona El Prat → Mumbai return flight'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Lisbon & Barcelona → Mumbai',h:true},{i:'🚄',t:'Lisbon → Porto Train',d:'Alfa Pendular inter-city train included',h:true},{i:'🛫',t:'Internal Flight: Porto → Madrid',d:'Cabin baggage (7 kg) only included*',h:true},{i:'🚄',t:'Madrid → Barcelona AVE',d:'High-speed bullet train included',h:true},{i:'🚖',t:'All Airport Transfers',d:'LIS arrival & BCN departure airport transfers',h:true},{i:'🏨',t:'9 Nights Hotel',d:'3-star hotels near metro stations, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 9 days · Veg options available'},{i:'⛪',t:'Sagrada Família Guided Tour',d:'Skip-the-line + tower access, Barcelona'},{i:'🏘️',t:'Park Güell',d:'Entry ticket + guided visit, Barcelona'},{i:'🏰',t:'Sintra Day Trip from Lisbon',d:'Pena Palace entry + guided excursion'},{i:'⛴️',t:'Douro River Wine Cruise',d:'1-hour cruise + port wine tasting, Porto'},{i:'🏛️',t:'Prado Museum',d:'Skip-the-line entry, Madrid'},{i:'🚶',t:'Barcelona Gothic Quarter Walk',d:'Guided tour of El Born & Gothic Quarter'},{i:'📋',t:'Schengen Visa Assistance',d:'Covers both Portugal & Spain'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive coverage for full trip'}],
+  note:'*Porto→Madrid internal flight: cabin baggage (7 kg) only.'},
+
+  northernlights:{region:'🏰 Europe',title:'Northern Lights — Norway & Finland',tagline:'8 Nights · 9 Days · Oslo → Tromsø → Rovaniemi (Lapland)',price:'₹2,95,000 / person',days:[{b:'Day 1–2',c:'🏙️ Oslo (2 Nights)',d:'3-star city hotel · Arrival; Viking Ship Museum, Vigeland Park, Oslofjord'},{b:'Day 3–5',c:'🌌 Tromsø (3 Nights)',d:'3-star arctic hotel · Flight: Oslo→Tromsø (cabin baggage only)* · Two Northern Lights safaris'},{b:'Day 6–8',c:'🎅 Rovaniemi, Lapland (3 Nights)',d:'Lapland log cabin/hotel · Flight: Tromsø→Rovaniemi · Santa\'s Village, reindeer, aurora hunt'},{b:'Day 9',c:'✈️ Return to Mumbai',d:'Airport transfer · Rovaniemi → Helsinki → Mumbai return flight'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Oslo & Rovaniemi/Helsinki → Mumbai',h:true},{i:'🛫',t:'2 Internal Flights',d:'Oslo→Tromsø & Tromsø→Rovaniemi (cabin baggage only)*',h:true},{i:'🚖',t:'All Airport Transfers',d:'Oslo, Tromsø & Rovaniemi airport transfers',h:true},{i:'🏨',t:'8 Nights Hotel / Cabin',d:'3-star arctic hotels & Lapland log cabins, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 8 days · Veg options available'},{i:'🌌',t:'Northern Lights Safari × 2',d:'Two guided aurora hunting excursions, Tromsø'},{i:'🚁',t:'Snowmobile Arctic Safari',d:'1-hour guided snowmobile tour in the Arctic'},{i:'🦌',t:'Reindeer Sleigh Ride',d:'Traditional reindeer farm + sleigh experience'},{i:'🎅',t:'Santa\'s Village Rovaniemi',d:'Official visit to the Arctic Circle Santa Village'},{i:'🐕',t:'Husky Dog Sled Ride',d:'Short husky safari run with the dogs'},{i:'⛴️',t:'Oslo Fjord Ferry Cruise',d:'Scenic ferry cruise on Oslofjord, Oslo'},{i:'📋',t:'Schengen Visa Assistance',d:'Schengen covers both Norway & Finland'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive arctic travel insurance'}],
+  note:'Northern Lights are best seen Nov–Mar. Aurora sightings depend on weather & solar activity — two separate safaris are booked to maximise chances.'},
+
+  italy:{region:'🏰 Europe',title:'Italian Dream — Rome, Florence, Venice & Amalfi',tagline:'9 Nights · 10 Days · Rome → Florence → Venice → Amalfi Coast',price:'₹2,55,000 / person',days:[{b:'Day 1–3',c:'🏛️ Rome (3 Nights)',d:'3-star hotel near Termini · Arrival; Colosseum, Vatican, Trevi Fountain, Pantheon'},{b:'Day 4–5',c:'🖼️ Florence (2 Nights)',d:'3-star city hotel · High-speed Frecciarossa train from Rome · Uffizi, David, Duomo'},{b:'Day 6–7',c:'🚤 Venice (2 Nights)',d:'3-star hotel near Grand Canal · Train from Florence · Gondola, St Mark\'s, Rialto'},{b:'Day 8–9',c:'🌊 Amalfi Coast (2 Nights)',d:'3-star clifftop hotel · Train Rome→Naples + ferry to Amalfi · Positano, Ravello'},{b:'Day 10',c:'✈️ Return to Mumbai',d:'Airport transfer · Naples/Rome → Mumbai return flight'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Rome (FCO) & Naples/Rome → Mumbai',h:true},{i:'🚄',t:'All Inter-City Trains',d:'Rome→Florence, Florence→Venice, Venice→Naples high-speed trains',h:true},{i:'🚖',t:'All Airport Transfers',d:'FCO arrival & NAP/FCO departure airport transfers',h:true},{i:'🏨',t:'9 Nights Hotel',d:'3-star hotels in central locations, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 9 days · Veg & Indian options available'},{i:'🏛️',t:'Colosseum + Roman Forum',d:'Skip-the-line guided tour, Rome'},{i:'⛪',t:'Vatican Museums + Sistine Chapel',d:'Guided skip-the-line entry, Rome'},{i:'🎨',t:'Uffizi Gallery Entry',d:'Entry ticket, Florence'},{i:'🗿',t:'Michelangelo\'s David',d:'Accademia Gallery entry, Florence'},{i:'⛵',t:'Venice Gondola Ride',d:'30-minute shared gondola ride on the canals'},{i:'🚢',t:'Amalfi Coast Ferry',d:'Ferry along the coast + Positano visit included'},{i:'🌅',t:'Positano & Ravello Excursion',d:'Day trip along the Amalfi Coast with guide'},{i:'📋',t:'Schengen Visa Assistance',d:'Full documentation guidance for Italy Schengen'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive coverage for full trip'}],
+  note:'Italy is a perfect first Europe trip. Book 2–3 months in advance for best Amalfi hotel rates.'},
+
+  usa:{region:'🌍 Rest of World',title:'USA + Canada — East Coast & West Coast',tagline:'11 Nights · 12 Days · New York → Niagara → Toronto → Los Angeles',price:'₹3,25,000 / person',days:[{b:'Day 1–4',c:'🗽 New York City (4 Nights)',d:'3-star Midtown Manhattan hotel · Times Square, Central Park, Statue of Liberty, Brooklyn Bridge'},{b:'Day 5–6',c:'💦 Niagara Falls (2 Nights)',d:'3-star Niagara hotel · Both US & Canadian sides; Maid of the Mist boat'},{b:'Day 7–8',c:'🍁 Toronto (2 Nights)',d:'3-star downtown Toronto · CN Tower, Kensington Market, Distillery District'},{b:'Day 9–11',c:'🌴 Los Angeles (3 Nights)',d:'3-star Hollywood area hotel · Flight: Toronto→LA (cabin baggage only)* · Hollywood, Santa Monica'},{b:'Day 12',c:'✈️ Return to Mumbai',d:'Airport transfer · Los Angeles LAX → Mumbai return flight'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → New York (JFK) & Los Angeles → Mumbai',h:true},{i:'🛫',t:'Internal Flight: Toronto → LA',d:'Cabin baggage (7 kg) only included*',h:true},{i:'🚖',t:'All Airport Transfers',d:'JFK, Buffalo/Niagara, Toronto & LAX airport transfers',h:true},{i:'🏨',t:'11 Nights Hotel',d:'3-star hotels in central locations, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 11 days · Veg options available'},{i:'🗽',t:'Statue of Liberty & Ellis Island',d:'Ferry + guided tour from Battery Park, New York'},{i:'🏙️',t:'Empire State Building',d:'Main observation deck admission, New York'},{i:'💦',t:'Niagara Maid of the Mist',d:'Iconic boat tour at both US & Canadian falls'},{i:'🏙️',t:'CN Tower Toronto',d:'Observation deck admission (1,168 ft above the city)'},{i:'🎬',t:'Hollywood Walk of Fame',d:'Guided walking tour of Hollywood Blvd, Los Angeles'},{i:'🌊',t:'Santa Monica & Venice Beach',d:'Afternoon guided exploration of LA\'s iconic beach'},{i:'📋',t:'US & Canada Visa Guidance',d:'US B2 & Canada TRV documentation support'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive North America travel insurance'}],
+  note:'US and Canada visas must be applied individually — we provide full documentation support. Toronto→LA flight: cabin baggage (7 kg) only.'},
+
+  australia:{region:'🌍 Rest of World',title:'Australia & New Zealand',tagline:'10 Nights · 11 Days · Sydney → Melbourne → Auckland → Queenstown',price:'₹2,75,000 / person',days:[{b:'Day 1–3',c:'🦘 Sydney (3 Nights)',d:'3-star city hotel near Central · Opera House, Harbour Bridge walk, Bondi Beach'},{b:'Day 4–5',c:'🏙️ Melbourne (2 Nights)',d:'3-star city hotel · Flight: Sydney→Melbourne (cabin baggage only)* · Great Ocean Road day trip'},{b:'Day 6–8',c:'🥝 Auckland, NZ (3 Nights)',d:'3-star central Auckland hotel · Flight: Melbourne→Auckland · Sky Tower, Waiheke Island'},{b:'Day 9–10',c:'🏔️ Queenstown (2 Nights)',d:'3-star lakeside hotel · Milford Sound cruise, Skyline Gondola'},{b:'Day 11',c:'✈️ Return to Mumbai',d:'Airport transfer · Queenstown/Auckland → Mumbai return flight'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Sydney & Queenstown/Auckland → Mumbai',h:true},{i:'🛫',t:'2 Internal Flights',d:'Sydney→Melbourne & Melbourne→Auckland (cabin baggage only)*',h:true},{i:'🚖',t:'All Airport Transfers',d:'SYD, MEL, AKL & ZQN airport pick-up & drop',h:true},{i:'🏨',t:'10 Nights Hotel',d:'3-star hotels, central locations, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 10 days · Veg options available'},{i:'⛴️',t:'Sydney Harbour Cruise',d:'Scenic ferry cruise past Opera House & Harbour Bridge'},{i:'🌊',t:'Great Ocean Road Day Trip',d:'Full-day guided tour from Melbourne'},{i:'🗼',t:'Auckland Sky Tower',d:'Observation deck admission included'},{i:'⛵',t:'Milford Sound Cruise',d:'2-hour scenic cruise through Fiordland NZ'},{i:'🚠',t:'Queenstown Skyline Gondola',d:'Gondola ride + Luge runs, Queenstown'},{i:'📋',t:'Australia & NZ ETA Guidance',d:'Both Australia eVisitor & NZ ETA are online applications'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive travel insurance for full trip'}],
+  note:'Australia & NZ ETAs are both applied online — we guide you through both. Both internal flights: cabin baggage (7 kg) only.'},
+
+  africa:{region:'🌍 Rest of World',title:'Wild Africa — Kenya & Tanzania Safari',tagline:'8 Nights · 9 Days · Nairobi → Masai Mara → Serengeti → Ngorongoro',price:'₹2,95,000 / person',days:[{b:'Day 1',c:'🛬 Nairobi Arrival',d:'3-star Nairobi city hotel · Airport transfer · Giraffe Centre + Elephant Orphanage'},{b:'Day 2–4',c:'🦁 Masai Mara (3 Nights)',d:'Safari tented camp · 2 full-day + 1 half-day game drives · Big Five territory'},{b:'Day 5–6',c:'🦓 Serengeti, Tanzania (2 Nights)',d:'Tented safari camp · Cross into Tanzania · 2 full-day game drives'},{b:'Day 7–8',c:'🌋 Ngorongoro Crater (2 Nights)',d:'Lodge near crater rim · Full-day crater floor game drive'},{b:'Day 9',c:'✈️ Return to Mumbai',d:'Airport transfer · Nairobi Jomo Kenyatta → Mumbai return flight'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Nairobi (JKIA) & return',h:true},{i:'🚐',t:'All Safari 4×4 Game Drives',d:'Masai Mara (3) + Serengeti (2) + Ngorongoro Crater (1)',h:true},{i:'🚖',t:'All Airport Transfers',d:'NBO airport pick-up on arrival & drop on departure',h:true},{i:'🚌',t:'All Overland Transfers',d:'Inter-camp transfers throughout Kenya & Tanzania'},{i:'🏕️',t:'8 Nights Lodge/Camp',d:'Safari tented camps & lodges, twin sharing'},{i:'🍽️',t:'All Meals — Full Board',d:'Breakfast, lunch & dinner every single day'},{i:'🦒',t:'Giraffe Centre Nairobi',d:'Admission to Nairobi Giraffe Centre'},{i:'🐘',t:'David Sheldrick Elephant Orphanage',d:'Morning visit to baby elephant sanctuary'},{i:'🌋',t:'Ngorongoro Crater Entry Fee',d:'Conservation area fees + crater floor drive'},{i:'🌄',t:'Maasai Village Cultural Visit',d:'Traditional Maasai village experience'},{i:'📋',t:'Kenya e-Visa + Tanzania VOA',d:'Both visa applications guided & processed'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive Africa safari travel insurance'}],
+  note:'Africa is a FULL BOARD safari — all meals included at every lodge and camp. Best wildlife viewing Jul–Oct (Great Migration season).'},
+
+  /* ── BUDGET TRIPS ── */
+  b_thailand:{region:'🔥 Budget Trips Under ₹50k',title:'Budget Bangkok — Thailand Express',tagline:'3 Nights · 4 Days · Bangkok',price:'From ₹40,000 / person',isBudget:true,days:[{b:'Day 1',c:'🛬 Arrive Bangkok',d:'Budget hotel near BTS Skytrain · Airport transfer · Evening at Khaosan Road'},{b:'Day 2',c:'🏛️ Bangkok Highlights',d:'Grand Palace, Wat Pho, Wat Arun · Guided half-day city tour'},{b:'Day 3',c:'🛺 Floating Market + Muay Thai',d:'Damnoen Saduak floating market day trip · Optional evening Muay Thai show'},{b:'Day 4',c:'✈️ Return to Mumbai',d:'Hotel checkout · Airport transfer · Return flight'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Bangkok (BKK/DMK) & return',h:true},{i:'🚖',t:'Airport Transfers',d:'Bangkok airport pick-up on arrival & drop on departure',h:true},{i:'🏨',t:'3 Nights Hotel',d:'Up to 3-star hotel near BTS Skytrain, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 3 days · Veg options available'},{i:'🏛️',t:'Bangkok City Tour',d:'Grand Palace, Wat Arun, Wat Pho — guided half-day'},{i:'🚤',t:'Floating Market Day Trip',d:'Damnoen Saduak floating market tour'},{i:'📋',t:'Thailand Visa on Arrival',d:'Guidance for VOA — Indians are eligible'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive coverage for full trip'}],
+  note:'Prices are based on off-peak season round-trip flights from Mumbai. Peak season (Dec–Jan, Apr) rates may be higher. Hotel category is up to 3-star.'},
+
+  b_singapore:{region:'🔥 Budget Trips Under ₹50k',title:'Singapore on a Budget',tagline:'3 Nights · 4 Days · Singapore',price:'From ₹45,000 / person',isBudget:true,days:[{b:'Day 1',c:'🛬 Arrive Singapore',d:'Budget hotel near MRT · Airport transfer via MRT or shuttle · Evening at Clarke Quay'},{b:'Day 2',c:'🌿 Gardens & Marina Bay',d:'Gardens by the Bay free outdoor visit · Marina Bay Sands waterfront · Spectra light show'},{b:'Day 3',c:'🦁 Sentosa & Singapore Zoo',d:'Singapore Zoo admission with tram ride · Evening at Sentosa Boardwalk'},{b:'Day 4',c:'✈️ Return to Mumbai',d:'Hotel checkout · Airport transfer · Return flight'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Singapore (SIN) & return',h:true},{i:'🚖',t:'Airport Transfers',d:'Changi airport pick-up & drop via shared shuttle',h:true},{i:'🏨',t:'3 Nights Hotel',d:'Up to 3-star hotel near MRT, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 3 days · Veg options available'},{i:'🌿',t:'Gardens by the Bay',d:'Outdoor Supertree Grove visit + Spectra light show'},{i:'🦁',t:'Singapore Zoo',d:'Full admission + guided tram ride included'},{i:'📋',t:'Visa Assistance',d:'Singapore e-visa guidance for Indian passport holders'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive coverage for full trip'}],
+  note:'Prices are based on off-peak season round-trip flights from Mumbai. Singapore is visa-on-approval — we guide you through the e-visa application (takes ~3 days).'},
+
+  b_dubai:{region:'🔥 Budget Trips Under ₹50k',title:'Dubai Express — City of Gold',tagline:'3 Nights · 4 Days · Dubai',price:'From ₹40,000 / person',isBudget:true,days:[{b:'Day 1',c:'🛬 Arrive Dubai',d:'Budget hotel in Deira/BurJuman area · Airport transfer · Evening at Dubai Creek'},{b:'Day 2',c:'🏙️ Modern Dubai',d:'Burj Khalifa at the Top (Levels 124–125) · Dubai Mall · Dubai Fountain show'},{b:'Day 3',c:'🏜️ Desert Safari',d:'Half-day desert safari with dune bashing, camel ride & BBQ dinner'},{b:'Day 4',c:'✈️ Return to Mumbai',d:'Hotel checkout · Airport transfer · Return flight'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Dubai (DXB) & return',h:true},{i:'🚖',t:'Airport Transfers',d:'DXB airport pick-up on arrival & drop on departure',h:true},{i:'🏨',t:'3 Nights Hotel',d:'Up to 3-star hotel in central Dubai, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 3 days · Veg & Indian food options available'},{i:'🏙️',t:'Burj Khalifa "At the Top"',d:'Observation deck admission — Levels 124 & 125'},{i:'🏜️',t:'Desert Safari with BBQ Dinner',d:'Half-day dune bashing, camel ride & live entertainment'},{i:'📋',t:'UAE Visa Assistance',d:'UAE tourist visa on arrival for Indians — guidance provided'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive coverage for full trip'}],
+  note:'Indians get UAE visa on arrival (free). Prices based on off-peak season from Mumbai. Dubai Mall and Dubai Fountain show are free to visit.'},
+
+  b_dubaiAD:{region:'🔥 Budget Trips Under ₹50k',title:'Dubai + Abu Dhabi — Two Cities, One Trip',tagline:'4 Nights · 5 Days · Dubai + Abu Dhabi',price:'From ₹50,000 / person',isBudget:true,days:[{b:'Day 1',c:'🛬 Arrive Dubai',d:'Budget hotel central Dubai · Airport transfer · Evening at Dubai Creek / Gold Souk'},{b:'Day 2',c:'🏙️ Dubai City Tour',d:'Burj Khalifa, Dubai Mall, Dubai Frame, Dubai Fountain show at night'},{b:'Day 3',c:'🕌 Abu Dhabi Day Trip',d:'Sheikh Zayed Grand Mosque + Warner Bros. World or Yas Island visit'},{b:'Day 4',c:'🏜️ Desert Safari',d:'Half-day desert safari — dune bashing, camel ride, BBQ dinner'},{b:'Day 5',c:'✈️ Return to Mumbai',d:'Hotel checkout · Airport transfer · Return flight'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Dubai (DXB) & return',h:true},{i:'🚌',t:'Dubai ↔ Abu Dhabi Coach',d:'Return day-trip transfer to Abu Dhabi included',h:true},{i:'🚖',t:'Airport Transfers',d:'DXB airport pick-up on arrival & drop on departure',h:true},{i:'🏨',t:'4 Nights Hotel',d:'Up to 3-star hotel central Dubai, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 4 days · Indian & veg options available'},{i:'🏙️',t:'Burj Khalifa "At the Top"',d:'Observation deck admission — Levels 124 & 125'},{i:'🕌',t:'Sheikh Zayed Grand Mosque',d:'Guided visit to Abu Dhabi\'s iconic mosque (free entry)'},{i:'🏜️',t:'Desert Safari with BBQ Dinner',d:'Half-day dune bashing, camel ride & live entertainment'},{i:'📋',t:'UAE Visa Assistance',d:'UAE tourist visa on arrival for Indians — guidance provided'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive coverage for full trip'}],
+  note:'Prices based on off-peak season from Mumbai. Warner Bros. World or Yas Island admission is optional and can be added on the customisation call at extra cost.'},
+
+  b_nepal:{region:'🔥 Budget Trips Under ₹50k',title:'Nepal — Kathmandu & Surrounds',tagline:'3 Nights · 4 Days · Kathmandu',price:'From ₹40,000 / person',isBudget:true,days:[{b:'Day 1',c:'🛬 Arrive Kathmandu',d:'Budget hotel in Thamel · Airport transfer · Evening walk in Thamel & local dinner'},{b:'Day 2',c:'⛩️ Kathmandu Heritage Tour',d:'Pashupatinath Temple, Boudhanath Stupa, Swayambhunath (Monkey Temple) — full-day guided'},{b:'Day 3',c:'🏔️ Nagarkot Sunrise + Bhaktapur',d:'Pre-dawn drive to Nagarkot for Himalayan sunrise view · Bhaktapur Durbar Square (UNESCO) afternoon'},{b:'Day 4',c:'✈️ Return to Mumbai',d:'Hotel checkout · Airport transfer · Return flight to Mumbai'}],
+  incl:[{i:'✈️',t:'Return Flights',d:'Mumbai → Kathmandu (KTM) & return',h:true},{i:'🚖',t:'Airport Transfers',d:'KTM airport pick-up on arrival & drop on departure',h:true},{i:'🏨',t:'3 Nights Hotel',d:'Up to 3-star hotel in Thamel, twin sharing'},{i:'🍽️',t:'Breakfast & Dinner',d:'All 3 days · Veg & Indian food options always available'},{i:'⛩️',t:'Kathmandu Heritage Full-Day Tour',d:'Pashupatinath, Boudhanath, Swayambhunath — guided'},{i:'🌄',t:'Nagarkot Sunrise Drive',d:'Pre-dawn drive to Nagarkot for Himalayan sunrise views'},{i:'🏛️',t:'Bhaktapur Durbar Square',d:'UNESCO World Heritage site entry + guided tour'},{i:'📋',t:'Visa on Arrival',d:'Nepal VOA available at Kathmandu airport for Indians'},{i:'🛡️',t:'Travel Insurance',d:'Comprehensive coverage for full trip'}],
+  note:'Nepal is visa-on-arrival (USD 30 / approx. ₹2,500, paid at Kathmandu airport — not included in package price). Indian citizens can also enter with an Aadhar card without a passport for Nepal.'}
+};
+
+let currentKey = '';
+
+/* ─── POPUP RENDER ─── */
+function buildPopupBody(d) {
+  var priceBarClass = d.isBudget ? 'budget-price-bar-popup' : 'popup-price-bar';
+  // Update price bar style
+  document.getElementById('popPriceBar').className = priceBarClass;
+
+  var html = '<div class="incl-section"><div class="incl-section-title">📅 Day-by-Day Itinerary</div><div class="itinerary-days">';
+  d.days.forEach(function(day) {
+    html += '<div class="day-row"><span class="day-badge">' + day.b + '</span><div class="day-info"><strong>' + day.c + '</strong>' + day.d + '</div></div>';
+  });
+  html += '</div></div>';
+  html += '<div class="incl-section"><div class="incl-section-title">✅ What\'s Included</div><div class="incl-grid">';
+  d.incl.forEach(function(item) {
+    html += '<div class="incl-item' + (item.h ? ' highlight' : '') + '"><span class="incl-icon">' + item.i + '</span><div class="incl-text"><strong>' + item.t + '</strong><span>' + item.d + '</span></div></div>';
+  });
+  html += '</div></div>';
+  if (d.note) html += '<div class="note-bar">ℹ️ <strong>Note:</strong> ' + d.note + '</div>';
+  return html;
+}
+
+function openDestPopup(key) {
+  var d = D[key]; if (!d) return; currentKey = key;
+  document.getElementById('popRegion').textContent = d.region;
+  document.getElementById('popTitle').textContent = d.title;
+  document.getElementById('popTagline').textContent = d.tagline;
+  document.getElementById('popPrice').textContent = d.price;
+  document.getElementById('popBody').innerHTML = buildPopupBody(d);
+  document.getElementById('destPopup').style.display = 'flex';
+  document.querySelector('.popup-content').scrollTop = 0;
+}
+function closeDestPopup() { document.getElementById('destPopup').style.display = 'none'; }
+function enquireNow() {
+  var d = D[currentKey];
+  var msg = encodeURIComponent('Hi Trips From India! 👋\nI\'m interested in: ' + (d ? d.title : 'a trip') + '\nPrice listed: ' + (d ? d.price : '') + '\n\nPlease share more details and availability.');
+  window.open('https://wa.me/919324432129?text=' + msg, '_blank');
+}
+function customiseTrip() {
+  var d = D[currentKey];
+  var msg = encodeURIComponent('Hi Trips From India! 👋\nI\'d like to customise the "' + (d ? d.title : 'trip') + '".\n\nCan we discuss dates, group size and any special requirements?');
+  window.open('https://wa.me/919324432129?text=' + msg, '_blank');
+}
+
+/* ─── AI TRIP BUILDER ─── */
+var aiAnswers = {};
+var aiCurrentStep = 0;
+var aiSteps = [
+  {
+    key:'region', label:'Step 1 of 7', q:'Where would you love to go?',
+    type:'chips', multi:false,
+    options:['🌏 Southeast Asia','🏝️ Bali / Indonesia','🏖️ Thailand / Phuket','🇦🇪 Dubai / UAE','🗼 Europe','🇯🇵 Japan & Korea','🌊 Maldives','🌍 Africa Safari','🌎 USA / Canada','🥝 Australia / NZ','🏔️ Nepal','🤔 Help me decide']
+  },
+  {
+    key:'days', label:'Step 2 of 7', q:'How many days do you have?',
+    type:'chips', multi:false,
+    options:['3–4 Days','5–6 Days','7–8 Days','9–10 Days','11–14 Days','15+ Days']
+  },
+  {
+    key:'people', label:'Step 3 of 7', q:'How many people are travelling?',
+    type:'chips', multi:false,
+    options:['Just me (Solo)','2 People (Couple)','3–4 People','5–8 People (Group)','9+ People (Large Group)']
+  },
+  {
+    key:'budget', label:'Step 4 of 7', q:'What\'s your budget per person?',
+    type:'chips', multi:false,
+    options:['Under ₹50,000','₹50k – ₹1 Lakh','₹1 – ₹1.5 Lakh','₹1.5 – ₹2.5 Lakh','₹2.5 Lakh+','Flexible — show me options']
+  },
+  {
+    key:'hotel', label:'Step 5 of 7', q:'What hotel category do you prefer?',
+    type:'chips', multi:false,
+    options:['2–3 Star (Budget)','3–4 Star (Comfort)','4–5 Star (Premium)','5 Star (Luxury)']
+  },
+  {
+    key:'inclusions', label:'Step 6 of 7', q:'What should be included? (Choose all that apply)',
+    type:'chips', multi:true,
+    options:['✈️ Flights','🏨 Hotels','🍽️ Meals (B+D)','🗺️ Activities & Tours','🚖 Airport Transfers','📋 Visa Assistance','🛡️ Travel Insurance','💑 Honeymoon Extras']
+  },
+  {
+    key:'dates', label:'Step 7 of 7', q:'When are you planning to travel?',
+    type:'chips', multi:false,
+    options:['Next 1 Month','1–3 Months Away','3–6 Months Away','6+ Months Away','Flexible / Not Sure']
+  }
+];
+
+function openAI() {
+  aiAnswers = {}; aiCurrentStep = 0;
+  document.getElementById('aiPopup').style.display = 'flex';
+  renderAIStep();
+}
+function closeAI() { document.getElementById('aiPopup').style.display = 'none'; }
+
+function renderProgress() {
+  var total = aiSteps.length + 1; // +1 for result
+  var html = '';
+  for (var i = 0; i < total; i++) {
+    var cls = i < aiCurrentStep ? 'done' : (i === aiCurrentStep ? 'active' : '');
+    html += '<div class="ai-step-dot ' + cls + '"></div>';
+  }
+  document.getElementById('aiProgress').innerHTML = html;
+}
+
+function renderAIStep() {
+  renderProgress();
+  if (aiCurrentStep >= aiSteps.length) { renderAIResult(); return; }
+  var step = aiSteps[aiCurrentStep];
+  var html = '<div class="ai-question">';
+  html += '<span class="ai-q-label">' + step.label + '</span>';
+  html += '<div class="ai-q-text">' + step.q + '</div>';
+  html += '<div class="ai-chips" id="aiChips">';
+  step.options.forEach(function(opt) {
+    var sel = aiAnswers[step.key];
+    var isSel = step.multi ? (Array.isArray(sel) && sel.indexOf(opt) > -1) : sel === opt;
+    html += '<div class="ai-chip' + (isSel ? (step.multi ? ' multi-ok' : ' selected') : '') + '" onclick="selectChip(this,\'' + step.key + '\',\'' + opt.replace(/'/g,"\\'") + '\',' + step.multi + ')">' + opt + '</div>';
+  });
+  html += '</div></div>';
+  document.getElementById('aiStep').innerHTML = html;
+
+  var navHtml = '';
+  if (aiCurrentStep > 0) navHtml += '<button class="ai-btn-back" onclick="aiBack()">← Back</button>';
+  navHtml += '<button class="ai-btn-next" id="aiNextBtn" onclick="aiNext()" ' + (aiAnswers[step.key] && (!step.multi || (Array.isArray(aiAnswers[step.key]) && aiAnswers[step.key].length > 0)) ? '' : 'disabled') + '>' + (aiCurrentStep === aiSteps.length - 1 ? '✨ Build My Itinerary' : 'Next →') + '</button>';
+  document.getElementById('aiNav').innerHTML = navHtml;
+}
+
+function selectChip(el, key, val, multi) {
+  if (multi) {
+    if (!Array.isArray(aiAnswers[key])) aiAnswers[key] = [];
+    var idx = aiAnswers[key].indexOf(val);
+    if (idx > -1) { aiAnswers[key].splice(idx, 1); el.classList.remove('multi-ok'); }
+    else { aiAnswers[key].push(val); el.classList.add('multi-ok'); }
+  } else {
+    aiAnswers[key] = val;
+    document.querySelectorAll('#aiChips .ai-chip').forEach(function(c) { c.classList.remove('selected'); });
+    el.classList.add('selected');
+  }
+  var nb = document.getElementById('aiNextBtn');
+  if (nb) nb.disabled = false;
+}
+
+function aiNext() {
+  var step = aiSteps[aiCurrentStep];
+  if (!aiAnswers[step.key] || (step.multi && aiAnswers[step.key].length === 0)) return;
+  aiCurrentStep++;
+  renderAIStep();
+  document.querySelector('.ai-popup-content').scrollTop = 0;
+}
+function aiBack() {
+  if (aiCurrentStep > 0) { aiCurrentStep--; renderAIStep(); }
+  document.querySelector('.ai-popup-content').scrollTop = 0;
+}
+
+function renderAIResult() {
+  renderProgress();
+  // Build a custom itinerary summary based on answers
+  var region = aiAnswers.region || 'Southeast Asia';
+  var days = aiAnswers.days || '7–8 Days';
+  var people = aiAnswers.people || '2 People';
+  var budget = aiAnswers.budget || 'Flexible';
+  var hotel = aiAnswers.hotel || '3–4 Star (Comfort)';
+  var inclusions = Array.isArray(aiAnswers.inclusions) ? aiAnswers.inclusions.join(', ') : 'All-inclusive';
+  var dates = aiAnswers.dates || 'Flexible';
+
+  // Map region to a suggested itinerary
+  var itinerary = getAIItinerary(region, days);
+
+  var html = '<div class="ai-question">';
+  html += '<span class="ai-q-label">✨ Your Custom Itinerary</span>';
+  html += '<div class="ai-q-text" style="font-size:16px;">Here\'s a curated plan based on your preferences</div>';
+  html += '<div class="ai-result">';
+  html += '<div class="ai-result-title">' + itinerary.title + '</div>';
+  html += '<div class="ai-result-meta">' + days + ' · ' + people + ' · ' + hotel + ' · ' + dates + '</div>';
+  itinerary.days.forEach(function(d) {
+    html += '<div class="ai-result-day"><span class="ai-result-badge">' + d.b + '</span><div class="ai-result-text">' + d.t + '</div></div>';
+  });
+  html += '<div class="ai-result-incl">';
+  itinerary.tags.forEach(function(tag) { html += '<span class="ai-result-tag">' + tag + '</span>'; });
+  html += '</div>';
+  html += '<div class="ai-price-note"><p>Pricing for this custom itinerary depends on exact dates, group size and availability.</p><strong>Request a personalised quote on WhatsApp 👇</strong></div>';
+  html += '</div></div>';
+  document.getElementById('aiStep').innerHTML = html;
+
+  var summary = '✨ AI Trip Builder Request\n\n'
+    + 'Destination: ' + region + '\n'
+    + 'Duration: ' + days + '\n'
+    + 'Travellers: ' + people + '\n'
+    + 'Budget (per person): ' + budget + '\n'
+    + 'Hotel Category: ' + hotel + '\n'
+    + 'Inclusions Wanted: ' + inclusions + '\n'
+    + 'Travel Dates: ' + dates + '\n'
+    + 'Suggested Package: ' + itinerary.title + '\n\n'
+    + 'Please share a customised quote for this itinerary!';
+
+  document.getElementById('aiNav').innerHTML = '<button class="ai-btn-back" onclick="aiBack()">← Edit Preferences</button>'
+    + '<button class="ai-btn-send" onclick="sendAIRequest(\'' + encodeURIComponent(summary) + '\')"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Request Pricing on WhatsApp</button>';
+}
+
+function sendAIRequest(encodedMsg) {
+  window.open('https://wa.me/919324432129?text=' + encodedMsg, '_blank');
+}
+
+function getAIItinerary(region, days) {
+  var maps = {
+    'Southeast Asia': {title:'Southeast Asia Explorer — Singapore · KL · Thailand',days:[{b:'Day 1–2',t:'Arrive Singapore · Clarke Quay · Gardens by the Bay · Marina Bay Sands SkyPark'},{b:'Day 3–4',t:'Kuala Lumpur · Petronas Towers · Batu Caves · KLCC Park'},{b:'Day 5–6',t:'Phuket · Phi Phi Islands boat tour · Patong Beach'},{b:'Day 7+',t:'Krabi · Railay Beach · Four Islands · Return home'}],tags:['✈️ Flights','🏨 Hotel','🍽️ B+D','🚌 Transfers','🤿 Snorkelling','🌿 Gardens','📋 Visa']},
+    'Thailand / Phuket': {title:'Thailand — Bangkok · Phuket · Krabi',days:[{b:'Day 1–2',t:'Arrive Bangkok · Grand Palace · Wat Arun · Floating Market'},{b:'Day 3–4',t:'Phuket · James Bond Island Speedboat · Patong Beach'},{b:'Day 5–6',t:'Krabi · Railay Beach · Four Islands Snorkelling'},{b:'Day 7+',t:'Leisure & return flight home'}],tags:['✈️ Flights','🏨 Hotel','🍽️ B+D','🚖 Transfers','🏖️ Islands','📋 VOA']},
+    'Bali / Indonesia': {title:'Bali — Ubud · Seminyak · Uluwatu',days:[{b:'Day 1–2',t:'Arrive Ubud · Rice Terraces · Monkey Forest · Cultural Tour'},{b:'Day 3–4',t:'Mount Batur Sunrise Trek · Tanah Lot Sunset'},{b:'Day 5–6',t:'Seminyak · Surf Lesson · Beach clubs · Uluwatu Temple'},{b:'Day 7',t:'Free morning · Departure'}],tags:['✈️ Flights','🏨 Villa','🍽️ B+D','🚖 Transfers','🌋 Trek','🏄 Surf','📋 VOA']},
+    'Dubai / UAE': {title:'Dubai + Abu Dhabi — City of Gold & Grand Mosque',days:[{b:'Day 1',t:'Arrive Dubai · Dubai Creek · Gold Souk'},{b:'Day 2',t:'Burj Khalifa · Dubai Mall · Dubai Fountain show'},{b:'Day 3',t:'Abu Dhabi · Sheikh Zayed Grand Mosque · Ferrari World or Yas Island'},{b:'Day 4–5',t:'Desert Safari · Dune bashing · Camel ride · BBQ Dinner · Return'}],tags:['✈️ Flights','🏨 Hotel','🍽️ B+D','🚖 Transfers','🏙️ Burj','🏜️ Desert','📋 VOA']},
+    'Europe': {title:'European Highlights — Paris · Brussels · Amsterdam',days:[{b:'Day 1–3',t:'Paris · Eiffel Tower Summit · Louvre · Seine Cruise · Versailles'},{b:'Day 4–5',t:'Brussels · Grand Place · Atomium · Belgian chocolates'},{b:'Day 6–8',t:'Amsterdam · Canal Cruise · Keukenhof (seasonal) · Bike Tour'},{b:'Day 9',t:'Amsterdam Schiphol departure · Return to Mumbai'}],tags:['✈️ Flights','🏨 Hotel','🍽️ B+D','🚄 Rail','🗼 Eiffel','🖼️ Louvre','📋 Schengen']},
+    'Japan & Korea': {title:'Japan + Korea — Tokyo · Kyoto · Osaka · Seoul',days:[{b:'Day 1–3',t:'Tokyo · Shibuya Crossing · Asakusa · Tokyo Skytree'},{b:'Day 4–5',t:'Kyoto · Fushimi Inari · Arashiyama Bamboo · Shinkansen from Tokyo'},{b:'Day 6–8',t:'Osaka · Universal Studios Japan · Osaka Castle · Nara Deer Park'},{b:'Day 9–11',t:'Seoul · Gyeongbokgung Palace · Myeongdong · N Seoul Tower'}],tags:['✈️ Flights','🚅 Shinkansen','🏨 Hotel','🍽️ B+D','🎡 USJ','⛩️ Temples','📋 Visa']},
+    'Maldives': {title:'Maldives — Overwater Bliss & Coral Reefs',days:[{b:'Day 1',t:'Arrive Malé · Speedboat to resort island'},{b:'Day 2–3',t:'Snorkelling · Dolphin Watch Cruise · Coral Garden boat tour'},{b:'Day 4–5',t:'Kayaking · Night Fishing · Sunset cocktails on the deck'},{b:'Day 6',t:'Final morning at leisure · Return to Malé · Fly home'}],tags:['✈️ Flights','🏨 Resort','🍽️ Full Board','🚤 Speedboat','🤿 Snorkelling','🐬 Dolphins','📋 VOA']},
+    'Africa Safari': {title:'Wild Africa — Masai Mara · Serengeti · Ngorongoro',days:[{b:'Day 1',t:'Arrive Nairobi · Giraffe Centre · Elephant Orphanage'},{b:'Day 2–4',t:'Masai Mara · Morning & evening game drives · Big Five'},{b:'Day 5–6',t:'Serengeti, Tanzania · Great Migration territory'},{b:'Day 7–9',t:'Ngorongoro Crater · Crater floor drive · Return to Nairobi'}],tags:['✈️ Flights','🏕️ Safari Camp','🍽️ Full Board','🚖 Transfers','🦁 Big Five','🌄 Safari','📋 e-Visa']},
+    'USA / Canada': {title:'USA + Canada — New York · Niagara · Toronto · LA',days:[{b:'Day 1–4',t:'New York · Times Square · Statue of Liberty · Empire State Building'},{b:'Day 5–6',t:'Niagara Falls · Maid of the Mist · Canadian side'},{b:'Day 7–8',t:'Toronto · CN Tower · Distillery District'},{b:'Day 9–11',t:'Los Angeles · Hollywood · Santa Monica · Beverly Hills'}],tags:['✈️ Flights','🏨 Hotel','🍽️ B+D','🚖 Transfers','🗽 NYC','💦 Niagara','📋 Visa']},
+    'Australia / NZ': {title:'Australia & New Zealand — Sydney · Melbourne · Auckland · Queenstown',days:[{b:'Day 1–3',t:'Sydney · Opera House · Harbour Bridge · Bondi Beach'},{b:'Day 4–5',t:'Melbourne · Great Ocean Road day trip'},{b:'Day 6–8',t:'Auckland, NZ · Sky Tower · Waiheke Island'},{b:'Day 9–10',t:'Queenstown · Milford Sound Cruise · Skyline Gondola'}],tags:['✈️ Flights','🏨 Hotel','🍽️ B+D','🚖 Transfers','⛴️ Cruise','🚠 Gondola','📋 ETA']},
+    'Nepal': {title:'Nepal — Kathmandu · Nagarkot · Bhaktapur',days:[{b:'Day 1',t:'Arrive Kathmandu · Thamel · Swayambhunath Monkey Temple'},{b:'Day 2',t:'Pashupatinath · Boudhanath Stupa · Full heritage tour'},{b:'Day 3',t:'Nagarkot Sunrise (Himalayan views) · Bhaktapur Durbar Square'},{b:'Day 4',t:'Leisure morning · Return flight to Mumbai'}],tags:['✈️ Flights','🏨 Hotel','🍽️ B+D','🚖 Transfers','⛩️ Temples','🏔️ Himalayas','📋 VOA']}
+  };
+  // fuzzy match
+  var keys = Object.keys(maps);
+  for (var i = 0; i < keys.length; i++) {
+    if (region.indexOf(keys[i].split(' ')[0]) > -1 || region.indexOf(keys[i].split(' ')[keys[i].split(' ').length-1]) > -1) return maps[keys[i]];
+  }
+  return maps['Southeast Asia'];
+}
+
+/* ─── UTILS ─── */
+var obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold: 0.1, rootMargin: '0px 0px -50px 0px'});
+document.querySelectorAll('.fade-up').forEach(function(el) { obs.observe(el); });
+
+function showDest(region, btn) {
+  document.querySelectorAll('.dest-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById('dest-' + region).classList.add('active');
+  if (btn) btn.classList.add('active');
+}
+
+function submitToGoogle(e) {
+  e.preventDefault();
+  var name = document.getElementById('fname').value;
+  var phone = document.getElementById('fphone').value;
+  var dest = document.getElementById('fdest').value;
+  var waMsg = encodeURIComponent('Hi Trips From India! 👋\nName: ' + name + '\nPhone: ' + phone + '\nDream Destination: ' + (dest || 'Not specified') + '\n\nPlease share itinerary details.');
+  window.open('https://wa.me/919324432129?text=' + waMsg, '_blank');
+  document.getElementById('formMsg').style.display = 'block';
+  document.getElementById('enquiryForm').style.display = 'none';
+  setTimeout(function() {
+    document.getElementById('enquiryForm').style.display = 'flex';
+    document.getElementById('formMsg').style.display = 'none';
+    document.getElementById('enquiryForm').reset();
+  }, 3000);
+}
+
+document.getElementById('destPopup').addEventListener('click', function(e) { if (e.target === this) closeDestPopup(); });
+document.getElementById('aiPopup').addEventListener('click', function(e) { if (e.target === this) closeAI(); });
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { closeDestPopup(); closeAI(); } });
+</script>
+</body>
+</html>
