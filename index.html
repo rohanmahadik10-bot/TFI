@@ -209,7 +209,7 @@ footer{background:#1a1a2e;padding:64px 56px 32px}
 /* ═══ BUDGET POPUP (reuse popup-content shell with green price bar) ═══ */
 .budget-price-bar-popup{background:linear-gradient(135deg,#06d6a0,#0096ff);border-radius:12px;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
 
-/* ═══ AI TRIP BUILDER POPUP ═══ */
+/* ═══ TRIP BUILDER POPUP ═══ */
 #aiPopup{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:600;backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:16px}
 .ai-popup-content{background:#0d1117;border:1px solid rgba(124,58,237,0.3);border-radius:24px;max-width:640px;width:100%;max-height:92vh;overflow-y:auto;box-shadow:0 40px 80px rgba(0,0,0,0.5);animation:popIn 0.4s cubic-bezier(0.34,1.56,0.64,1);position:relative;display:flex;flex-direction:column}
 .ai-header{padding:28px 32px 20px;background:linear-gradient(135deg,rgba(124,58,237,0.2),rgba(168,85,247,0.1));border-bottom:1px solid rgba(255,255,255,0.08);border-radius:24px 24px 0 0;position:sticky;top:0;z-index:2}
@@ -301,7 +301,7 @@ footer{background:#1a1a2e;padding:64px 56px 32px}
   </div>
 </div>
 
-<!-- AI TRIP BUILDER POPUP -->
+<!-- TRIP BUILDER POPUP -->
 <div id="aiPopup">
   <div class="ai-popup-content">
     <div class="ai-header">
@@ -309,7 +309,7 @@ footer{background:#1a1a2e;padding:64px 56px 32px}
       <div class="ai-title-row">
         <span class="ai-spark">✨</span>
         <div>
-          <div class="ai-title">AI Trip Builder</div>
+          <div class="ai-title">Trip Builder</div>
           <div class="ai-subtitle">Tell us your dream — we'll build your perfect itinerary</div>
         </div>
       </div>
@@ -332,7 +332,7 @@ footer{background:#1a1a2e;padding:64px 56px 32px}
     <li><a onclick="document.location.href='#why';return false;">Why Travel</a></li>
     <li><a onclick="document.location.href='#destinations';return false;">Destinations</a></li>
     <li><a onclick="document.location.href='#budget';return false;">Budget Trips</a></li>
-    <li><a class="nav-ai" onclick="openAI();return false;">✨ AI Trip Builder</a></li>
+    <li><a class="nav-ai" onclick="openAI();return false;">✨ Trip Builder</a></li>
     <li><a class="nav-cta" onclick="document.location.href='#contact';return false;">Plan My Trip</a></li>
   </ul>
 </nav>
@@ -346,7 +346,7 @@ footer{background:#1a1a2e;padding:64px 56px 32px}
     <p class="hero-sub">International travel, made shockingly affordable for every Indian. Explore destinations that often cost less than Ladakh or Andaman — and feel like a dream.</p>
     <div class="hero-btns">
       <a onclick="document.location.href='#destinations';return false;" class="btn-teal">🌍 &nbsp;Explore Destinations</a>
-      <a onclick="openAI();return false;" class="btn-ai-hero">✨ &nbsp;AI Trip Builder</a>
+      <a onclick="openAI();return false;" class="btn-ai-hero">✨ &nbsp;Trip Builder</a>
       <a onclick="document.location.href='#contact';return false;" class="btn-outline">💬 &nbsp;Talk to Us</a>
     </div>
     <div class="hero-stats">
@@ -712,7 +712,7 @@ function customiseTrip() {
   window.open('https://wa.me/919324432129?text=' + msg, '_blank');
 }
 
-/* ─── AI TRIP BUILDER ─── */
+/* ─── TRIP BUILDER ─── */
 var aiAnswers = {};
 var aiCurrentStep = 0;
 var aiSteps = [
@@ -849,7 +849,7 @@ function renderAIResult() {
   html += '</div></div>';
   document.getElementById('aiStep').innerHTML = html;
 
-  var summary = '✨ AI Trip Builder Request\n\n'
+  var summary = '✨ Trip Builder Request\n\n'
     + 'Destination: ' + region + '\n'
     + 'Duration: ' + days + '\n'
     + 'Travellers: ' + people + '\n'
