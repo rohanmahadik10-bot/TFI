@@ -563,19 +563,36 @@ section{
 
 <!-- NAV -->
 <nav>
+
   <a class="nav-logo" onclick="document.location.href='#home';return false;">
     <img src="logo.png" alt="Trips From India Logo"/>
     <div class="nav-logo-name">Trips From <span>India</span></div>
   </a>
+
+  <button class="menu-toggle" onclick="toggleMenu()">
+    ☰
+  </button>
+
   <ul class="nav-links">
     <li><a onclick="document.location.href='#why';return false;">Why Travel</a></li>
+
     <li><a onclick="document.location.href='#destinations';return false;">Destinations</a></li>
-    <li><a onclick="document.location.href='#budget';return false;">Budget Trips</a></li><li><a onclick="document.location.href='#destinations';showDest('india',document.querySelectorAll('.tab-btn')[3]);return false;">India Trips</a></li><li><a onclick="document.location.href='#services';return false;">Services</a></li>
+
+    <li><a onclick="document.location.href='#budget';return false;">Budget Trips</a></li>
+
+    <li><a onclick="document.location.href='#destinations';showDest('india',document.querySelectorAll('.tab-btn')[3]);return false;">India Trips</a></li>
+
+    <li><a onclick="document.location.href='#services';return false;">Services</a></li>
+
     <li><a class="nav-ai" onclick="openAI();return false;">✨ Trip Builder</a></li>
+
     <li><a class="nav-cta" onclick="document.location.href='#contact';return false;">Plan My Trip</a></li>
   </ul>
+
 </nav>
 
+
+  
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-glow"></div>
