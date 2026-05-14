@@ -338,6 +338,33 @@ footer{background:#1a1a2e;padding:64px 56px 32px}
 
 @media(max-width:600px){
 
+html,body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+nav{
+  padding:0 12px;
+  overflow:hidden;
+}
+
+section{
+  width:100%;
+  overflow:hidden;
+}
+
+.destinations,
+.why,
+.budget-section,
+.services{
+  overflow:hidden;
+}
+
 .dest-grid{
   grid-template-columns:1fr;
 }
@@ -364,6 +391,44 @@ footer{background:#1a1a2e;padding:64px 56px 32px}
   grid-template-columns:1fr;
 }
 
+/* HERO MOBILE */
+
+.hero h1{
+  font-size:56px;
+  line-height:.95;
+}
+
+.hero-copy{
+  max-width:100%;
+}
+
+/* SERVICES MOBILE FIX */
+
+.services-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  padding:0 14px;
+}
+
+.service-box{
+  padding:18px 12px;
+  border-radius:18px;
+}
+
+.service-box img{
+  width:72px;
+  height:72px;
+  min-width:72px;
+  min-height:72px;
+  max-width:72px;
+  max-height:72px;
+}
+
+.service-box h3{
+  font-size:15px;
+}
+
+}
 /* SERVICES MOBILE FIX */
 
 .services-grid{
