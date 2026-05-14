@@ -16,7 +16,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 56px;height:72px;d
 .nav-logo-name span{color:var(--teal)}
 .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
 .nav-links a{text-decoration:none;font-size:13px;font-weight:500;color:rgba(255,255,255,0.55);cursor:pointer;transition:color 0.2s}
-.nav-links a:hover{color:var(--white)}
+ a:hover{color:var(--white)}
 .nav-cta{background:var(--teal)!important;color:var(--white)!important;padding:10px 24px!important;border-radius:50px!important;font-weight:700!important;font-size:13px!important}
 .nav-cta:hover{background:var(--teal2)!important}
 .nav-ai{background:linear-gradient(135deg,#7c3aed,#a855f7)!important;color:var(--white)!important;padding:10px 20px!important;border-radius:50px!important;font-weight:700!important;font-size:13px!important;display:inline-flex!important;align-items:center!important;gap:6px!important}
@@ -330,6 +330,10 @@ html,body{
   font-size:16px;
 }
 
+  .nav-links{
+  display:none;
+}
+  
 nav{
   padding:0 14px;
 }
